@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
             endPos = cam.ScreenToWorldPoint(Input.mousePosition); //Detectar donde se dejo de presionar la pantalla
             Debug.DrawLine(startPos, endPos, Color.red, 1f); 
             direction = endPos - startPos; //Direccion desde donde se pulso la pantalla hasta donde se solto
-            Debug.Log(direction.magnitude);
+            //Debug.Log(direction.magnitude);
             rb.velocity = direction.normalized * speed; //Da movimiento al jugador segun la direccion normalizada por la velocidad
         }
 
