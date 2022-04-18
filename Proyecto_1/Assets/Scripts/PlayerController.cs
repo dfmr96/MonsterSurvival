@@ -23,21 +23,21 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            startPos = cam.ScreenToWorldPoint(Input.mousePosition);
+            startPos = cam.ScreenToWorldPoint(Input.mousePosition); //Detectar donde se pulso la pantalla
         }
 
         if (Input.GetMouseButtonUp(0))
         {
-            endPos = cam.ScreenToWorldPoint(Input.mousePosition);
-            Debug.DrawLine(startPos, endPos, Color.red, 1f);
-            direction = endPos - startPos;
+            endPos = cam.ScreenToWorldPoint(Input.mousePosition); //Detectar donde se dejo de presionar la pantalla
+            Debug.DrawLine(startPos, endPos, Color.red, 1f); 
+            direction = endPos - startPos; //Direccion desde donde se pulso la pantalla hasta donde se solto
             Debug.Log(direction.magnitude);
-            rb.velocity = direction.normalized * speed;
+            rb.velocity = direction.normalized * speed; //Da movimiento al jugador segun la direccion normalizada por la velocidad
         }
 
         if(direction.magnitude < 1)
         {
-            rb.velocity = Vector2.zero;
+            rb.velocity = Vector2.zero; //Si la pantalla se presiono sin arrastrar lo suficiente el dedo, el jugador se detendrá;
         }
         vel = rb.velocity.magnitude;
 
