@@ -42,4 +42,6 @@ public class PlayerController : MonoBehaviour
         vel = rb.velocity.magnitude;
 
     }
+
+
 }

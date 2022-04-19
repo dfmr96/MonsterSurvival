@@ -6,30 +6,36 @@ public class ItemDamage : MonoBehaviour
 {
     [SerializeField] int damage;
     [SerializeField] Collider2D[] objectsInsideArea;
-    [SerializeField] float radiusOfDamage;
+    [SerializeField] float radiusOfDamage = 0.5f;
     [SerializeField] LayerMask mask;
     [SerializeField] float weaponCooldown = 2f;
-
-    private void Awake()
-    {
-        radiusOfDamage = GetComponent<CircleCollider2D>().radius;
-    }
+    PlayerStats playerStats;
     public void Start()
     {
+        playerStats = FindObjectOfType<PlayerStats>();
         StartCoroutine(DamageEnemy());
+    }
+    private void Update()
+    {
+        objectsInsideArea = Physics2D.OverlapCircleAll(transform.position, radiusOfDamage, mask);
+
     }
 
     IEnumerator DamageEnemy()
     {
         while (true)
         {
-            objectsInsideArea = Physics2D.OverlapCircleAll(transform.position, radiusOfDamage, mask);
             foreach (Collider2D collider2D in objectsInsideArea)
             {
-                collider2D.GetComponent<EnemyController>().TakeDamage(damage);
+                collider2D.GetComponent<EnemyStats>().TakeDamage(damage);
             }
-
             yield return new WaitForSeconds(weaponCooldown);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, radiusOfDamage);
     }
 }
