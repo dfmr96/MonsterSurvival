@@ -12,7 +12,7 @@ public class PlatformDefines : MonoBehaviour
         Application.targetFrameRate = 60;
 #endif
 #if UNITY_IOS
-        Application.targetFramerate = 120;
+        Application.targetFrameRate = 120;
 #endif
 
 #if UNITY_STANDALONE_OSX
