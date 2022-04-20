@@ -10,6 +10,8 @@ public class UIManager : MonoBehaviour
     public Slider playerExpBar;
     public TMP_Text playerExpText;
     public TMP_Text currentLevel;
+    public TMP_Text enemiesKilled;
+    public TMP_Text timer;
     [SerializeField] PlayerStats playerStatsManager;
 
 
@@ -26,5 +28,15 @@ public class UIManager : MonoBehaviour
         
         playerExpText.text = deltaExp + "/" + deltaMaxExp;
         currentLevel.text = "Level:" + playerStatsManager.currentLevel;
+        enemiesKilled.text = GameManager.sharedInstance.enemiesKilled.ToString();
+
+        if (GameManager.sharedInstance.timerSeconds < 10)
+        {
+            timer.text = "0"+GameManager.sharedInstance.timerMinutes.ToString() + ":0"+GameManager.sharedInstance.timerSeconds.ToString();
+        } else
+        {
+            timer.text = "0"+GameManager.sharedInstance.timerMinutes.ToString() + ":" + GameManager.sharedInstance.timerSeconds.ToString();
+        }
+
     }
 }

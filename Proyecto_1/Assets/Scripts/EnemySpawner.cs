@@ -24,10 +24,11 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(enemySpawnDelay);
         }
     }
-    private void OnDrawGizmos()
+    /*private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(player.transform.position, minSpawnRadius);
         Gizmos.DrawWireSphere(player.transform.position, maxSpawnRadius);
     }
+    */
 }

@@ -23,8 +23,9 @@ public class EnemyStats : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(gameObject);
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().AddExperience(expWhenKilled);
+            Destroy(gameObject);
+            GameManager.sharedInstance.enemiesKilled++;
         }
     }
 
