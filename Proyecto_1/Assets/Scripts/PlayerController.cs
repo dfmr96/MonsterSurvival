@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Vector3 startPos;
     Vector3 endPos;
-    Vector3 direction;
-    [SerializeField] int speed = 5;
+    public Vector3 direction;
+    [SerializeField] float speed = 5f;
     [SerializeField] Camera cam;
     [SerializeField] float vel;
     

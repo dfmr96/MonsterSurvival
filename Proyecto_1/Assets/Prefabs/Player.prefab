@@ -260,7 +260,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72c53265d0e8e5e47a3e2f28ba9a6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  direction: {x: 0, y: 0, z: 0}
+  speed: 2
   cam: {fileID: 0}
   vel: 0
 --- !u!114 &1123149959

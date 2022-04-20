@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] GameObject[] enemyPrefab;
-    [SerializeField] int enemySpawnDelay = 10;
+    [SerializeField] float enemySpawnDelay = 10;
     [SerializeField] float maxSpawnRadius;
     [SerializeField] float minSpawnRadius;
     [SerializeField] Transform player;
@@ -24,11 +24,11 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(enemySpawnDelay);
         }
     }
-    /*private void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(player.transform.position, minSpawnRadius);
         Gizmos.DrawWireSphere(player.transform.position, maxSpawnRadius);
     }
-    */
+    
 }
