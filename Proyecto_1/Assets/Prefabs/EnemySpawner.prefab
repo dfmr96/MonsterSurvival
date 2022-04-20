@@ -47,7 +47,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 1662630152830727612, guid: a048d8112035d2d44b7c97803f8776ad, type: 3}
   - {fileID: 1662630152830727612, guid: 789084cf5533c2042b5f4565dd4dee7f, type: 3}
-  enemySpawnDelay: 0.5
+  enemySpawnDelay: 0.25
   maxSpawnRadius: 20
   minSpawnRadius: 17
   player: {fileID: 0}
