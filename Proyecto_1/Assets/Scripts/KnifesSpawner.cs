@@ -12,7 +12,7 @@ public class KnifesSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = player = FindObjectOfType<PlayerController>().transform;
+        player = FindObjectOfType<PlayerController>().transform;
         direction = player.GetComponent<PlayerController>().direction;
         StartCoroutine(KnifeSpawner());
 
