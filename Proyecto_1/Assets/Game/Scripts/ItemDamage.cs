@@ -18,6 +18,7 @@ public class ItemDamage : MonoBehaviour
     private void Update()
     {
         objectsInsideArea = Physics2D.OverlapCircleAll(transform.position, radiusOfDamage, mask);
+        transform.position = FindObjectOfType<PlayerController>().transform.position;
 
     }
 
