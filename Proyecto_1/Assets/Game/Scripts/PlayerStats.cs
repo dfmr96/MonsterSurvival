@@ -7,8 +7,13 @@ public class PlayerStats : MonoBehaviour
     public int currentLevel;
     public int currentExp;
     public int[] expToLevelUp;
-    public int health = 10;
+    public float health;
+    public float maxHealth = 10;
 
+    private void Start()
+    {
+        health = maxHealth;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -20,6 +25,10 @@ public class PlayerStats : MonoBehaviour
         if (currentExp >= expToLevelUp[currentLevel])
         {
             currentLevel++;
+            if(currentLevel != 1)
+            {
+            GameManager.sharedInstance.levelUpScreenManager.ShowLevelUpScreen();
+            }
         }
 
         if (health <= 0)
@@ -33,8 +42,10 @@ public class PlayerStats : MonoBehaviour
         currentExp += exp;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
+        damage -= FindObjectOfType<DefenseUp>().defenseBonus[1];
         health -= damage;
+        Debug.Log("Recibio" + damage);
     }
 }

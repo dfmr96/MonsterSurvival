@@ -7,7 +7,7 @@ public class EnemyStats : MonoBehaviour
     public int health = 2;
     public float speed = 3f;
     public float attackSpeed = 1f, attackDelay = 2f;
-    public int attackDamage = 1;
+    public float attackDamage = 1;
     [SerializeField] GameObject gemPrefab;
 
 

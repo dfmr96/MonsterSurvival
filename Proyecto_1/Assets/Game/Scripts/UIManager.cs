@@ -19,11 +19,12 @@ public class UIManager : MonoBehaviour
     {
         var deltaExp = playerStatsManager.currentExp - playerStatsManager.expToLevelUp[playerStatsManager.currentLevel - 1];
         var deltaMaxExp = playerStatsManager.expToLevelUp[playerStatsManager.currentLevel] - playerStatsManager.expToLevelUp[playerStatsManager.currentLevel - 1];
-        //Por si subimos de nivel
+        
+        //Barras
         playerExpBar.maxValue = deltaMaxExp;
         playerExpBar.value = deltaExp;
 
-
+        //Texto
         StringBuilder sb = new StringBuilder("");
         
         playerExpText.text = deltaExp + "/" + deltaMaxExp;

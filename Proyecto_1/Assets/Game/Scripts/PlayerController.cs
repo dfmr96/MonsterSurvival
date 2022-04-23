@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     Vector3 startPos;
     Vector3 endPos;
     public Vector3 direction;
-    [SerializeField] float speed = 5f;
+    public float speed = 5f;
     [SerializeField] Camera cam;
     [SerializeField] float vel;
     
