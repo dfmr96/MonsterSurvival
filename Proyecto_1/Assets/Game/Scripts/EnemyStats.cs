@@ -6,9 +6,9 @@ public class EnemyStats : MonoBehaviour
 {
     public int health = 2;
     public float speed = 3f;
-    [SerializeField] int expWhenKilled = 5;
     public float attackSpeed = 1f, attackDelay = 2f;
     public int attackDamage = 1;
+    [SerializeField] GameObject gemPrefab;
 
 
 
@@ -23,9 +23,9 @@ public class EnemyStats : MonoBehaviour
     {
         if (health <= 0)
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().AddExperience(expWhenKilled);
-            Destroy(gameObject);
+            Instantiate(gemPrefab, gameObject.transform.position, Quaternion.identity);
             GameManager.sharedInstance.enemiesKilled++;
+            Destroy(gameObject);
         }
     }
 

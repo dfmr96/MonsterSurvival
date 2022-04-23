@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 1662630152830727614}
   - component: {fileID: 1662630152830727615}
   - component: {fileID: -4656408657029819649}
-  - component: {fileID: 3579762939944142060}
-  - component: {fileID: 7872290546390099478}
+  - component: {fileID: 8181890355876129803}
+  - component: {fileID: 4027939748112457064}
   m_Layer: 3
-  m_Name: Vampire Bat
+  m_Name: RoyalScarab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1403522030, guid: 72032194cecbcbd4292205d1b38592cd, type: 3}
+  m_Sprite: {fileID: 115458471, guid: 72032194cecbcbd4292205d1b38592cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,13 +114,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec7bdcb8617bab94ba4fd65b07451193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
-  speed: 0.85
-  expWhenKilled: 5
+  health: 3
+  speed: 1
+  expWhenKilled: 7
   attackSpeed: 1
   attackDelay: 2
   attackDamage: 1
---- !u!95 &3579762939944142060
+  gemPrefab: {fileID: 5897675193580475937, guid: 5bcdb7dfb9c15bf44850c061ee348663, type: 3}
+--- !u!95 &8181890355876129803
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -130,7 +131,7 @@ Animator:
   m_GameObject: {fileID: 1662630152830727612}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 029fb892889ea704db72c16ef27e6ab3, type: 2}
+  m_Controller: {fileID: 9100000, guid: dcaf357027b197f4f93999057214f3fc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -140,7 +141,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &7872290546390099478
+--- !u!61 &4027939748112457064
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,12 +158,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.875, y: 0.5625}
+    oldSize: {x: 1, y: 0.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.875, y: 0.5625}
+  m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0

@@ -12,7 +12,7 @@ public class KnifeController : MonoBehaviour
     {
         player = FindObjectOfType<PlayerController>().transform;
         direction = player.GetComponent<PlayerController>().direction;
-        transform.eulerAngles = new Vector3(0, 0, UtilsClass.GetAngleFromVectorFloat(direction));
+        transform.eulerAngles = new Vector3(0, 0, UtilsClass.GetAngleFromVectorFloat(direction)-45);
     }
 
     private void Update()
