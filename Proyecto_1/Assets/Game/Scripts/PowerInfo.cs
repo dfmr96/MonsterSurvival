@@ -7,6 +7,7 @@ public class PowerInfo : MonoBehaviour
 {
     public string powerName, powerDescription;
     public Sprite powerIcon;
+    public int level = 1;
     // Start is called before the first frame update
     void Start()
     {

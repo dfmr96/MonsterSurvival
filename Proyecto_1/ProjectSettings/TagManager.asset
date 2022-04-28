@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - GemTaker
+  - Garlic
+  - Knife
+  - Shuriken
+  - Health Up
+  - Speed Up
+  - Defense Up
   layers:
   - Default
   - TransparentFX
@@ -12,7 +19,7 @@ TagManager:
   - Enemy
   - Water
   - UI
-  - 
+  - Powers
   - 
   - 
   - 

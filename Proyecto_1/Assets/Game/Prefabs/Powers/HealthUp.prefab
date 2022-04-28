@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5770405490732858770}
   - component: {fileID: 5770405490732858771}
   - component: {fileID: 576943412443592047}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HealthUp
-  m_TagString: Untagged
+  m_TagString: Health Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,3 +70,4 @@ MonoBehaviour:
   powerName: Health Up
   powerDescription: Increase max health stat
   powerIcon: {fileID: -678483765, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
+  level: 1

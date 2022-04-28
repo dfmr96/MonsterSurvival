@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3577846309640506039}
   - component: {fileID: 3577846309640506032}
   - component: {fileID: -4150153141311135467}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpeedUp
-  m_TagString: Untagged
+  m_TagString: Speed Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,3 +69,4 @@ MonoBehaviour:
   powerName: Speed Up
   powerDescription: Increase Speed stat
   powerIcon: {fileID: 924461594, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
+  level: 1

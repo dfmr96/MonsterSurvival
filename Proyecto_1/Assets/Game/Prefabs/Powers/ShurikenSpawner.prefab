@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5147963109617955825}
   - component: {fileID: 5147963109617955824}
   - component: {fileID: -6431254557341960164}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShurikenSpawner
-  m_TagString: Untagged
+  m_TagString: Shuriken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,3 +65,4 @@ MonoBehaviour:
   powerName: Shuriken
   powerDescription: Summon an amount of shuriken that spin around
   powerIcon: {fileID: -1852582129, guid: 792fb709a142fb948b8de7a24b534f1a, type: 3}
+  level: 1

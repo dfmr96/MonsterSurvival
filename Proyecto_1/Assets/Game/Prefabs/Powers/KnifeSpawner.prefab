@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5254866063578609872}
   - component: {fileID: 5254866063578609873}
   - component: {fileID: -7925701590278452707}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KnifeSpawner
-  m_TagString: Untagged
+  m_TagString: Knife
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,3 +62,4 @@ MonoBehaviour:
   powerName: Knife
   powerDescription: Throw a knife at the last direction
   powerIcon: {fileID: 1108723804, guid: d40b437cb96eab3449fbdb3177503c10, type: 3}
+  level: 1

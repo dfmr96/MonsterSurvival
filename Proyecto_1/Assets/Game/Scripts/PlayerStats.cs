@@ -46,7 +46,7 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        damage -= FindObjectOfType<DefenseUp>().defenseBonus[1];
+        //damage -= FindObjectOfType<DefenseUp>().defenseBonus[1];
         health -= damage;
         Debug.Log("Recibio" + damage);
     }

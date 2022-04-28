@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1621467079224398598}
   - component: {fileID: 1621467079224398599}
   - component: {fileID: 9077006291436154929}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Garlic
-  m_TagString: Untagged
+  m_TagString: Garlic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,3 +137,4 @@ MonoBehaviour:
   powerName: Garlic
   powerDescription: Create an aura that deal damage to surrounding enemies
   powerIcon: {fileID: 1102613802, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
+  level: 1

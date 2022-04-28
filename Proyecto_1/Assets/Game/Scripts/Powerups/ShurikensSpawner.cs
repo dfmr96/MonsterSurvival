@@ -40,7 +40,6 @@ public class ShurikensSpawner : MonoBehaviour
     void crearAllShuriken() {
     	int radius = 3;
     	for (int i = 0; i < numberOfObjects; i++)  {
-	        Debug.Log("testing Timer");
 
 			float angle = i * Mathf.PI * 2 / numberOfObjects;
 			float x = Mathf.Cos(angle) * radius;
@@ -75,8 +74,6 @@ public class ShurikensSpawner : MonoBehaviour
 			needRespawn = true;
 		}
 
-		Debug.Log(needRespawn);
-		Debug.Log(Time.fixedTime - needToRespawnTime);
 			
 		if (needRespawn && (Time.fixedTime - needToRespawnTime > 5.0)) {
 			for (int i = 0; i < numberOfObjects; i++)  {

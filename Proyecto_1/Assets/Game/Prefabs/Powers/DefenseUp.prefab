@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3933462725097388231}
   - component: {fileID: 3933462725097388230}
   - component: {fileID: 5635751287452914550}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DefenseUp
-  m_TagString: Untagged
+  m_TagString: Defense Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,3 +69,4 @@ MonoBehaviour:
   powerName: Defense Up
   powerDescription: Raise defense stat
   powerIcon: {fileID: 1570002788, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
+  level: 1

@@ -11,6 +11,7 @@ public class LevelUpScreen : MonoBehaviour
     public PowerUpsPool powerUpsPoolManager;
     public TMP_Text power1Name, power1Description, power2Name, power2Description, power3Name, power3Description;
     public GameObject power1Icon, power2Icon, power3Icon;
+    public PowersManager powersManager;
     int randomPower1, randomPower2, randomPower3;
 
     public void ShowLevelUpScreen()
@@ -36,7 +37,7 @@ public class LevelUpScreen : MonoBehaviour
         power1Name.text = powerUpsPoolManager.powerUps[randomPower1].GetComponent<PowerInfo>().powerName.ToString();
         power1Description.text = powerUpsPoolManager.powerUps[randomPower1].GetComponent<PowerInfo>().powerDescription.ToString();
         power1Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower1].GetComponent<PowerInfo>().powerIcon;
-        powerUpsPoolManager.powerUps.RemoveAt(randomPower1);
+     //   powerUpsPoolManager.powerUps.RemoveAt(randomPower1);
     }
 
     public void ShowPower2()
@@ -45,7 +46,7 @@ public class LevelUpScreen : MonoBehaviour
         power2Name.text = powerUpsPoolManager.powerUps[randomPower2].GetComponent<PowerInfo>().powerName.ToString();
         power2Description.text = powerUpsPoolManager.powerUps[randomPower2].GetComponent<PowerInfo>().powerDescription.ToString();
         power2Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower2].GetComponent<PowerInfo>().powerIcon;
-        powerUpsPoolManager.powerUps.RemoveAt(randomPower2);
+     //   powerUpsPoolManager.powerUps.RemoveAt(randomPower2);
     }
 
     public void ShowPower3()
@@ -54,7 +55,24 @@ public class LevelUpScreen : MonoBehaviour
         power3Name.text = powerUpsPoolManager.powerUps[randomPower3].GetComponent<PowerInfo>().powerName.ToString();
         power3Description.text = powerUpsPoolManager.powerUps[randomPower3].GetComponent<PowerInfo>().powerDescription.ToString();
         power3Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower3].GetComponent<PowerInfo>().powerIcon;
-        powerUpsPoolManager.powerUps.RemoveAt(randomPower3);
+     //   powerUpsPoolManager.powerUps.RemoveAt(randomPower3);
 
+    }
+
+    public void ChoosePower1()
+    {
+        HideLevelupScreen();
+        powersManager.CheckRandomPower(randomPower1);
+    }
+
+    public void ChoosePower2()
+    {
+        HideLevelupScreen();
+        powersManager.CheckRandomPower(randomPower2);
+    }
+    public void ChoosePower3()
+    {
+        HideLevelupScreen();
+        powersManager.CheckRandomPower(randomPower3);
     }
 }
