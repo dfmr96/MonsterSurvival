@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5770405490732858770}
   - component: {fileID: 5770405490732858771}
+  - component: {fileID: 576943412443592047}
   m_Layer: 0
   m_Name: HealthUp
   m_TagString: Untagged
@@ -53,3 +54,19 @@ MonoBehaviour:
   - 1.35
   - 1.45
   - 1.5
+  skillName: HealthUp
+--- !u!114 &576943412443592047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5770405490732858772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33addd74678a1b49b7003b18bd5bae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerName: Health Up
+  powerDescription: Increase max health stat
+  powerIcon: {fileID: -678483765, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}

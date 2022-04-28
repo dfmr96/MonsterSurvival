@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1621467079224398601}
   - component: {fileID: 1621467079224398598}
   - component: {fileID: 1621467079224398599}
+  - component: {fileID: 9077006291436154929}
   m_Layer: 0
   m_Name: Garlic
   m_TagString: Untagged
@@ -121,3 +122,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   weaponCooldown: 1
+--- !u!114 &9077006291436154929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621467079224398597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33addd74678a1b49b7003b18bd5bae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerName: Garlic
+  powerDescription: Create an aura that deal damage to surrounding enemies
+  powerIcon: {fileID: 1102613802, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}

@@ -10,9 +10,7 @@ public class ShurikenController1 : MonoBehaviour
     [SerializeField] float angles;
     [SerializeField] int damage;
     public int shurikenHealth = 5;
-    Vector3 vectorPosition;
-    float timeCounter = 0;
-    // Start is called before the first frame update
+    Vector3 vectorPosition;    // Start is called before the first frame update
 
     // Vector3 originalPosition;
 

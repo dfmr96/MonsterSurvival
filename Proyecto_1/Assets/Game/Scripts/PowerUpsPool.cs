@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class PowerUpsPool : MonoBehaviour
 {
-    public GameObject[] PowerUps;
+    public List<GameObject> powerUps;
+
 }

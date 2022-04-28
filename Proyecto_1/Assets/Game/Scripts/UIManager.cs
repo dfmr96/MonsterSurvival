@@ -17,9 +17,10 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        var deltaExp = playerStatsManager.currentExp - playerStatsManager.expToLevelUp[playerStatsManager.currentLevel - 1];
-        var deltaMaxExp = playerStatsManager.expToLevelUp[playerStatsManager.currentLevel] - playerStatsManager.expToLevelUp[playerStatsManager.currentLevel - 1];
-        
+        var delta = playerStatsManager.expToLevelUp[playerStatsManager.currentLevel - 1];
+        var deltaExp = playerStatsManager.currentExp - delta;
+        var deltaMaxExp = playerStatsManager.expToLevelUp[playerStatsManager.currentLevel] - delta;
+
         //Barras
         playerExpBar.maxValue = deltaMaxExp;
         playerExpBar.value = deltaExp;
@@ -30,14 +31,7 @@ public class UIManager : MonoBehaviour
         playerExpText.text = deltaExp + "/" + deltaMaxExp;
         currentLevel.text = "Level:" + playerStatsManager.currentLevel;
         enemiesKilled.text = GameManager.sharedInstance.enemiesKilled.ToString();
-
-        if (GameManager.sharedInstance.timerSeconds < 10)
-        {
-            timer.text = "0"+GameManager.sharedInstance.timerMinutes.ToString() + ":0"+GameManager.sharedInstance.timerSeconds.ToString();
-        } else
-        {
-            timer.text = "0"+GameManager.sharedInstance.timerMinutes.ToString() + ":" + GameManager.sharedInstance.timerSeconds.ToString();
-        }
+        timer.text = GameManager.sharedInstance.timerMinutes.ToString("00") + ":"+GameManager.sharedInstance.timerSeconds.ToString("00");
 
     }
 }

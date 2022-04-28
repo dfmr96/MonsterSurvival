@@ -9,14 +9,19 @@ public class LevelUpScreen : MonoBehaviour
     public GameObject levelUpScreen;
     public PlayerStats playerStats;
     public PowerUpsPool powerUpsPoolManager;
-    public TMP_Text power1Name, power2Name;
-    int randomPower2;
+    public TMP_Text power1Name, power1Description, power2Name, power2Description, power3Name, power3Description;
+    public GameObject power1Icon, power2Icon, power3Icon;
+    int randomPower1, randomPower2, randomPower3;
 
     public void ShowLevelUpScreen()
     {
         levelUpScreen.SetActive(true);
         Time.timeScale = 0;
-        randomPower2 = Random.Range(0, powerUpsPoolManager.PowerUps.Length);
+        ShowPower1();
+        ShowPower2();
+        ShowPower3();
+
+
     }
     public void HideLevelupScreen()
     {
@@ -24,11 +29,32 @@ public class LevelUpScreen : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    private void Update()
+
+    public void ShowPower1()
     {
-        power1Name.text = powerUpsPoolManager.PowerUps[3].GetComponent<HealthUp>().skillName.ToString();
-        power2Name.text = randomPower2.ToString();
+        randomPower1 = Random.Range(0, powerUpsPoolManager.powerUps.Count);
+        power1Name.text = powerUpsPoolManager.powerUps[randomPower1].GetComponent<PowerInfo>().powerName.ToString();
+        power1Description.text = powerUpsPoolManager.powerUps[randomPower1].GetComponent<PowerInfo>().powerDescription.ToString();
+        power1Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower1].GetComponent<PowerInfo>().powerIcon;
+        powerUpsPoolManager.powerUps.RemoveAt(randomPower1);
     }
 
+    public void ShowPower2()
+    {
+        randomPower2 = Random.Range(0, powerUpsPoolManager.powerUps.Count);
+        power2Name.text = powerUpsPoolManager.powerUps[randomPower2].GetComponent<PowerInfo>().powerName.ToString();
+        power2Description.text = powerUpsPoolManager.powerUps[randomPower2].GetComponent<PowerInfo>().powerDescription.ToString();
+        power2Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower2].GetComponent<PowerInfo>().powerIcon;
+        powerUpsPoolManager.powerUps.RemoveAt(randomPower2);
+    }
 
+    public void ShowPower3()
+    {
+        randomPower3 = Random.Range(0, powerUpsPoolManager.powerUps.Count);
+        power3Name.text = powerUpsPoolManager.powerUps[randomPower3].GetComponent<PowerInfo>().powerName.ToString();
+        power3Description.text = powerUpsPoolManager.powerUps[randomPower3].GetComponent<PowerInfo>().powerDescription.ToString();
+        power3Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower3].GetComponent<PowerInfo>().powerIcon;
+        powerUpsPoolManager.powerUps.RemoveAt(randomPower3);
+
+    }
 }
