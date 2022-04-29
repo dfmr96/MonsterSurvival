@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public int enemiesKilled;
     public int timerSeconds, timerMinutes;
     public LevelUpScreen levelUpScreenManager;
+    public GameOver gameOverScreenManager;
 
     private void Awake()
     {
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        Time.timeScale = 1;
         StartCoroutine(timerRoutine());
     }
 
@@ -39,5 +41,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void CallGameOverScreen()
+    {
+        gameOverScreenManager.ShowGameOverScreen();
+    }
     
 }

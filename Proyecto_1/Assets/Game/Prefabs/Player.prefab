@@ -155,10 +155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0b0e50ecc4407f4589cac415a4d75f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  health: 100
   currentLevel: 0
   currentExp: 0
-  expToLevelUp: 00000000050000000a00000014000000e8030000
-  health: 10
+  expToLevelUp: 00000000140000002800000050000000a0000000400100008002000000050000000a0000b80b0000a00f0000
 --- !u!95 &1480570913
 Animator:
   serializedVersion: 4

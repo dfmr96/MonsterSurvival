@@ -7,16 +7,19 @@ public class PowerInfo : MonoBehaviour
 {
     public string powerName, powerDescription;
     public Sprite powerIcon;
-    public int level = 1;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int currentLevel = 1;
+    public int maxLevel;
 
-    // Update is called once per frame
-    void Update()
+
+    public float health;
+    public float damage;
+    public float angularSpeed;
+    public float speed;
+    public float coolDown;
+    public float radius;
+
+    public void LevelUp()
     {
-        
+        currentLevel++;
     }
 }

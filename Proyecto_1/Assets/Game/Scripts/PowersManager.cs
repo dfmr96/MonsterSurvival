@@ -33,7 +33,7 @@ public class PowersManager : MonoBehaviour
             Debug.Log(powerChosenName + "creado");
         } else
         {
-            GameObject.FindGameObjectWithTag(powerChosen).GetComponent<PowerInfo>().level++;
+            GameObject.FindGameObjectWithTag(powerChosen).GetComponent<PowerInfo>().LevelUp();
         }
     }
 }

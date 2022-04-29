@@ -118,7 +118,7 @@ MonoBehaviour:
   speed: 1
   attackSpeed: 1
   attackDelay: 2
-  attackDamage: 1
+  attackDamage: 2
   gemPrefab: {fileID: 5897675193580475937, guid: 5bcdb7dfb9c15bf44850c061ee348663, type: 3}
 --- !u!95 &8181890355876129803
 Animator:

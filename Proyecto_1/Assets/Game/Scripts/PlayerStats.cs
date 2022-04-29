@@ -6,11 +6,11 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    public float maxHealth = 10;
+    public float health;
     public int currentLevel;
     public int currentExp;
     public int[] expToLevelUp;
-    public float health;
-    public float maxHealth = 10;
 
     private void Start()
     {
@@ -35,7 +35,7 @@ public class PlayerStats : MonoBehaviour
 
         if (health <= 0)
         {
-            gameObject.SetActive(false);
+            GameManager.sharedInstance.CallGameOverScreen();
         }
     }
 

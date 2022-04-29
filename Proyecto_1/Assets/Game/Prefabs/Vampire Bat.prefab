@@ -116,10 +116,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 2
   speed: 0.85
-  expWhenKilled: 5
   attackSpeed: 1
   attackDelay: 2
-  attackDamage: 1
+  attackDamage: 3
   gemPrefab: {fileID: 5897675193580475937, guid: 5bcdb7dfb9c15bf44850c061ee348663, type: 3}
 --- !u!95 &3579762939944142060
 Animator:
