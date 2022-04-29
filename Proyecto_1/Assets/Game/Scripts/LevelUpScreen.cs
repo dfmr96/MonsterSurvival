@@ -20,6 +20,8 @@ public class LevelUpScreen : MonoBehaviour
         ShowPower1();
         ShowPower2();
         ShowPower3();
+        powerUpsPoolManager.CopyList();
+
 
 
     }
@@ -51,7 +53,7 @@ public class LevelUpScreen : MonoBehaviour
             power1Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower1].GetComponent<PowerInfo>().powerIcon;
 
         }
-        //   powerUpsPoolManager.powerUps.RemoveAt(randomPower1);
+           powerUpsPoolManager.powerUps.RemoveAt(randomPower1);
     }
 
     public void ShowPower2()
@@ -75,7 +77,7 @@ public class LevelUpScreen : MonoBehaviour
             power2Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower2].GetComponent<PowerInfo>().powerIcon;
 
         }
-        //   powerUpsPoolManager.powerUps.RemoveAt(randomPower2);
+           powerUpsPoolManager.powerUps.RemoveAt(randomPower2);
     }
 
     public void ShowPower3()
@@ -99,22 +101,27 @@ public class LevelUpScreen : MonoBehaviour
             power3Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower3].GetComponent<PowerInfo>().powerIcon;
 
         }
+        powerUpsPoolManager.powerUps.RemoveAt(randomPower3);
+
     }
 
     public void ChoosePower1()
     {
         HideLevelupScreen();
         powersManager.CheckRandomPower(randomPower1);
+
     }
 
     public void ChoosePower2()
     {
         HideLevelupScreen();
         powersManager.CheckRandomPower(randomPower2);
+
     }
     public void ChoosePower3()
     {
         HideLevelupScreen();
         powersManager.CheckRandomPower(randomPower3);
+
     }
 }
