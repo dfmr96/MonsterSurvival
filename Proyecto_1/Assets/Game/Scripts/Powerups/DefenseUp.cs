@@ -9,6 +9,6 @@ public class DefenseUp : MonoBehaviour
 
     private void Update()
     {
-    powerInfo.defense = defenseBonus[powerInfo.currentLevel];   
+        powerInfo.defense = defenseBonus[powerInfo.currentLevel];
     }
 }

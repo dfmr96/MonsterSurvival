@@ -20,7 +20,8 @@ public class PowersManager : MonoBehaviour
     public void CheckRandomPower(int randomPower)
     {
         powerChosenGO = powerUpsPoolManager.powerUps[randomPower];
-        powerChosenName = powerChosenGO.GetComponent<PowerInfo>().powerName;
+        var powerChosenInfo = powerChosenGO.GetComponent<PowerInfo>();
+        powerChosenName = powerChosenInfo.powerName;
         Debug.Log(powerChosenName);
         LevelUpPower(powerChosenName);
     }

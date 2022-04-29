@@ -68,11 +68,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerName: Defense Up
-  powerDescription: Raise defense stat
+  powerDescription: Increase defense bonus
   powerIcon: {fileID: 1570002788, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
   currentLevel: 1
   maxLevel: 5
   health: 0
+  defense: 0
   damage: 0
   angularSpeed: 0
   speed: 0

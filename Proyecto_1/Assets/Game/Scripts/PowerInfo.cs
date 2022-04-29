@@ -22,5 +22,18 @@ public class PowerInfo : MonoBehaviour
     public void LevelUp()
     {
         currentLevel++;
+        //UpdatePowerInfo();
     }
+
+    //public void UpdatePowerInfo()
+    //{
+    //    switch (currentLevel)
+    //    {
+    //        case 1: 
+    //            powerName = "";
+    //            break;
+
+
+    //    }
+    //}
 }
