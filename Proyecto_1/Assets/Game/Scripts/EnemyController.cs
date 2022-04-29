@@ -28,7 +28,7 @@ public class EnemyController : MonoBehaviour
         if (attackDelayCounter > enemyStats.attackDelay && canAttack)
         {
             playerStats.TakeDamage(enemyStats.attackDamage);
-            attackDelayCounter = 0;
+            attackDelayCounter = 0f;
         }
     }
 

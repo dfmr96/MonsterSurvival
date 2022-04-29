@@ -12,6 +12,7 @@ public class PowerInfo : MonoBehaviour
 
 
     public float health;
+    public float defense;
     public float damage;
     public float angularSpeed;
     public float speed;

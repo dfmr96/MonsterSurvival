@@ -1,7 +1,3 @@
-
-
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -27,9 +23,9 @@ public class PlayerStats : MonoBehaviour
         if (currentExp >= expToLevelUp[currentLevel])
         {
             currentLevel++;
-            if(currentLevel != 1)
+            if (currentLevel != 1)
             {
-            GameManager.sharedInstance.levelUpScreenManager.ShowLevelUpScreen();
+                GameManager.sharedInstance.levelUpScreenManager.ShowLevelUpScreen();
             }
         }
 
@@ -46,7 +42,19 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        //damage -= FindObjectOfType<DefenseUp>().defenseBonus[1];
+        if (GameObject.FindGameObjectWithTag("Defense Up") != null)
+        {
+        float defense = FindObjectOfType<DefenseUp>().GetComponentInParent<PowerInfo>().defense;
+            if (defense > damage)
+            {
+                damage = 0f;
+            }
+            else
+            {
+                damage -= defense;
+            }
+        }
+
         health -= damage;
         Debug.Log("Recibio" + damage);
     }

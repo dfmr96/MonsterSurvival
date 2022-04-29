@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-    public int health = 2;
+    public float health = 2f;
     public float speed = 3f;
     public float attackSpeed = 1f, attackDelay = 2f;
-    public float attackDamage = 1;
+    public float attackDamage = 1f;
     [SerializeField] GameObject gemPrefab;
 
 
@@ -29,7 +29,7 @@ public class EnemyStats : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int Damage)
+    public void TakeDamage(float Damage)
     {
         health -= Damage;
     }
