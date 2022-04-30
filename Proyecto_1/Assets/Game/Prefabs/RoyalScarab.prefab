@@ -114,11 +114,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec7bdcb8617bab94ba4fd65b07451193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  speed: 1
+  health: 5
+  speed: 0.75
   attackSpeed: 1
   attackDelay: 2
-  attackDamage: 2
+  attackDamage: 5
   gemPrefab: {fileID: 5897675193580475937, guid: 5bcdb7dfb9c15bf44850c061ee348663, type: 3}
 --- !u!95 &8181890355876129803
 Animator:
