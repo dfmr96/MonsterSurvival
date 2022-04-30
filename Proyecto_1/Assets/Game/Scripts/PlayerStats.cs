@@ -33,6 +33,10 @@ public class PlayerStats : MonoBehaviour
         {
             GameManager.sharedInstance.CallGameOverScreen();
         }
+        if(health>maxHealth)
+        {
+            health = maxHealth;
+        }
     }
 
     public void AddExperience(int exp)
