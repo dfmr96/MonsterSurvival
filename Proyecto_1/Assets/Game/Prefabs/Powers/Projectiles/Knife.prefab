@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2862261659086918395}
   - component: {fileID: 2359901236654701302}
   - component: {fileID: 2765045546378262938}
+  - component: {fileID: -6238799266775076009}
   m_Layer: 6
   m_Name: Knife
   m_TagString: Untagged
@@ -138,3 +139,16 @@ CapsuleCollider2D:
   m_Offset: {x: -0.094517134, y: -0.048930757}
   m_Size: {x: 1.0356302, y: 0.61202985}
   m_Direction: 1
+--- !u!114 &-6238799266775076009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2862261659086918397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d605a17dec4aa4459bdcfec9972d1f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerInfo: {fileID: -7925701590278452707, guid: 65d9331b1547f8a4184a164f60c7569a, type: 3}

@@ -34,21 +34,21 @@ public class LevelUpScreen : MonoBehaviour
     public void ShowPower1()
     {
         randomPower1 = Random.Range(0, powerUpsPoolManager.powerUps.Count);
-        Debug.Log(randomPower1);
+       // Debug.Log(randomPower1);
         power1Info = powerUpsPoolManager.powerUps[randomPower1].GetComponent<PowerInfo>();
 
         if (GameObject.FindGameObjectWithTag(power1Info.powerName) == null)
         {
-            Debug.Log("No existe 1");
-            power1Name.text = power1Info.powerName.ToString() + " (Level:" + power1Info.currentLevel.ToString() + ")";
+          //  Debug.Log("No existe 1");
+            power1Name.text = power1Info.powerName.ToString() + " NEW";
             power1Description.text = powerUpsPoolManager.powerUps[randomPower1].GetComponent<PowerInfo>().powerDescription.ToString();
             power1Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower1].GetComponent<PowerInfo>().powerIcon;
         }
         else
         {
-            Debug.Log("poder 1 existe");
-            power1Name.text = GameObject.FindGameObjectWithTag(power1Info.powerName).GetComponent<PowerInfo>().powerName.ToString() + (GameObject.FindGameObjectWithTag(power1Info.powerName).GetComponent<PowerInfo>().currentLevel + 1).ToString();
-            power1Description.text = powerUpsPoolManager.powerUps[randomPower1].GetComponent<PowerInfo>().powerDescription.ToString();
+           // Debug.Log("poder 1 existe");
+            power1Name.text = GameObject.FindGameObjectWithTag(power1Info.powerName).GetComponent<PowerInfo>().powerName.ToString() + " (Level:" + (GameObject.FindGameObjectWithTag(power1Info.powerName).GetComponent<PowerInfo>().currentLevel + 1).ToString() + ")";
+            power1Description.text = GameObject.FindGameObjectWithTag(power1Info.powerName).GetComponent<PowerInfo>().powerDescription.ToString();
             power1Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower1].GetComponent<PowerInfo>().powerIcon;
 
         }
@@ -58,27 +58,27 @@ public class LevelUpScreen : MonoBehaviour
     public void ShowPower2()
     {
         randomPower2 = Random.Range(0, powerUpsPoolManager.powerUps.Count);
-        Debug.Log(randomPower2);
+       // Debug.Log(randomPower2);
         power2Info = powerUpsPoolManager.powerUps[randomPower2].GetComponent<PowerInfo>();
 
         while(randomPower2==randomPower1)
         {
             ShowPower2();
-            Debug.Log("Poder 2 = 1");
+         //   Debug.Log("Poder 2 = 1");
         }
 
         if (GameObject.FindGameObjectWithTag(power2Info.powerName) == null)
         {
-            Debug.Log("No existe 2");
-            power2Name.text = power2Info.powerName.ToString() + " (Level:" + power2Info.currentLevel.ToString() + ")";
+           // Debug.Log("No existe 2");
+            power2Name.text = power2Info.powerName.ToString() + " NEW";
             power2Description.text = powerUpsPoolManager.powerUps[randomPower2].GetComponent<PowerInfo>().powerDescription.ToString();
             power2Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower2].GetComponent<PowerInfo>().powerIcon;
         }
         else
         {
-            Debug.Log("poder 2 existe");
-            power2Name.text = GameObject.FindGameObjectWithTag(power2Info.powerName).GetComponent<PowerInfo>().powerName.ToString() + (GameObject.FindGameObjectWithTag(power2Info.powerName).GetComponent<PowerInfo>().currentLevel + 1).ToString();
-            power2Description.text = powerUpsPoolManager.powerUps[randomPower2].GetComponent<PowerInfo>().powerDescription.ToString();
+          //  Debug.Log("poder 2 existe");
+            power2Name.text = GameObject.FindGameObjectWithTag(power2Info.powerName).GetComponent<PowerInfo>().powerName.ToString() + " (Level:" + (GameObject.FindGameObjectWithTag(power2Info.powerName).GetComponent<PowerInfo>().currentLevel + 1).ToString() + ")";
+            power2Description.text = GameObject.FindGameObjectWithTag(power2Info.powerName).GetComponent<PowerInfo>().powerDescription.ToString() ;
             power2Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower2].GetComponent<PowerInfo>().powerIcon;
 
         }
@@ -88,27 +88,27 @@ public class LevelUpScreen : MonoBehaviour
     public void ShowPower3()
     {
         randomPower3 = Random.Range(0, powerUpsPoolManager.powerUps.Count);
-        Debug.Log(randomPower3);
+        //Debug.Log(randomPower3);
         power3Info = powerUpsPoolManager.powerUps[randomPower3].GetComponent<PowerInfo>();
 
         while (randomPower3 == randomPower1 || randomPower3 == randomPower2)
         {
             ShowPower3();
-            Debug.Log("Poder 3 = 1 || poder 3 = 1");
+           // Debug.Log("Poder 3 = 1 || poder 3 = 1");
         }
 
         if (GameObject.FindGameObjectWithTag(power3Info.powerName) == null)
         {
-            Debug.Log("No existe 3");
-            power3Name.text = power3Info.powerName.ToString() + " (Level:" + power3Info.currentLevel.ToString() + ")";
+            //Debug.Log("No existe 3");
+            power3Name.text = power3Info.powerName.ToString() + " NEW";
             power3Description.text = powerUpsPoolManager.powerUps[randomPower3].GetComponent<PowerInfo>().powerDescription.ToString();
             power3Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower3].GetComponent<PowerInfo>().powerIcon;
         }
         else
         {
-            Debug.Log("poder 3 existe");
-            power3Name.text = GameObject.FindGameObjectWithTag(power3Info.powerName).GetComponent<PowerInfo>().powerName.ToString() + (GameObject.FindGameObjectWithTag(power3Info.powerName).GetComponent<PowerInfo>().currentLevel + 1).ToString();
-            power3Description.text = powerUpsPoolManager.powerUps[randomPower3].GetComponent<PowerInfo>().powerDescription.ToString();
+          //  Debug.Log("poder 3 existe");
+            power3Name.text = GameObject.FindGameObjectWithTag(power3Info.powerName).GetComponent<PowerInfo>().powerName.ToString() + " (Level:" + (GameObject.FindGameObjectWithTag(power3Info.powerName).GetComponent<PowerInfo>().currentLevel + 1).ToString() + ")";
+            power3Description.text = GameObject.FindGameObjectWithTag(power3Info.powerName).GetComponent<PowerInfo>().powerDescription.ToString();
             power3Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower3].GetComponent<PowerInfo>().powerIcon;
 
         }
@@ -119,7 +119,6 @@ public class LevelUpScreen : MonoBehaviour
     public void ChoosePower1()
     {
         powersManager.CheckRandomPower(randomPower1);
-        powerUpsPoolManager.CopyList();
         HideLevelupScreen();
 
 
@@ -128,14 +127,12 @@ public class LevelUpScreen : MonoBehaviour
     public void ChoosePower2()
     {
         powersManager.CheckRandomPower(randomPower2);
-        powerUpsPoolManager.CopyList();
         HideLevelupScreen();
 
     }
     public void ChoosePower3()
     {
         powersManager.CheckRandomPower(randomPower3);
-        powerUpsPoolManager.CopyList();
         HideLevelupScreen();
 
     }

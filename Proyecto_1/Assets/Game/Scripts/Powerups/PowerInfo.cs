@@ -7,8 +7,9 @@ public class PowerInfo : MonoBehaviour
 {
     public string powerName, powerDescription;
     public Sprite powerIcon;
-    public int currentLevel = 1;
+    public int currentLevel = 0;
     public int maxLevel;
+    public bool leveledUp = false;
 
 
     public float health;
@@ -19,21 +20,13 @@ public class PowerInfo : MonoBehaviour
     public float coolDown;
     public float radius;
 
+    private void Start()
+    {
+        leveledUp = true;
+    }
     public void LevelUp()
     {
         currentLevel++;
-        //UpdatePowerInfo();
+        leveledUp = true;
     }
-
-    //public void UpdatePowerInfo()
-    //{
-    //    switch (currentLevel)
-    //    {
-    //        case 1: 
-    //            powerName = "";
-    //            break;
-
-
-    //    }
-    //}
 }

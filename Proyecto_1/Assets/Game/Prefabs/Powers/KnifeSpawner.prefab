@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5254866063578609872}
   - component: {fileID: 5254866063578609873}
   - component: {fileID: -7925701590278452707}
+  - component: {fileID: 822068126085916548}
   m_Layer: 6
   m_Name: KnifeSpawner
   m_TagString: Knife
@@ -71,3 +72,16 @@ MonoBehaviour:
   speed: 0
   coolDown: 0
   radius: 0
+--- !u!114 &822068126085916548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5254866063578609875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d605a17dec4aa4459bdcfec9972d1f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerInfo: {fileID: -7925701590278452707}

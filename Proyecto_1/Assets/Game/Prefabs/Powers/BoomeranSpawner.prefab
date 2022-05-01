@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5810927628026433494}
   - component: {fileID: 5810927628026433495}
   - component: {fileID: 5810927628026433489}
+  - component: {fileID: 336426258018092931}
   m_Layer: 0
   m_Name: BoomeranSpawner
   m_TagString: Boomeran
@@ -72,3 +73,16 @@ MonoBehaviour:
   powerInfo: {fileID: 5810927628026433495}
   boomeranPrefab: {fileID: 4335379817415681821, guid: 5ef1caac66b0d6c43b01de050a3592d3, type: 3}
   coolDownCounter: 0
+--- !u!114 &336426258018092931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5810927628026433492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d605a17dec4aa4459bdcfec9972d1f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerInfo: {fileID: 5810927628026433495}

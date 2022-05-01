@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8398466990673575733}
   - component: {fileID: -7663831161917079140}
   - component: {fileID: 2345725013219617645}
+  - component: {fileID: -3558167767979678241}
   m_Layer: 6
   m_Name: Shuriken
   m_TagString: Untagged
@@ -141,3 +142,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-3558167767979678241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8324569980205961621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d605a17dec4aa4459bdcfec9972d1f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerInfo: {fileID: -6431254557341960164, guid: f5df6482ff58fd94783690c8ededcbc6, type: 3}

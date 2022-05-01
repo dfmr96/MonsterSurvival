@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7644391527852492098}
   - component: {fileID: 1250034887417840806}
   - component: {fileID: 7644391527852492096}
+  - component: {fileID: -7142468112738885514}
   m_Layer: 0
   m_Name: LightningRing
   m_TagString: Lightning Ring
@@ -94,3 +95,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 10
+--- !u!114 &-7142468112738885514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7644391527852492101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d605a17dec4aa4459bdcfec9972d1f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerInfo: {fileID: 1250034887417840806}
