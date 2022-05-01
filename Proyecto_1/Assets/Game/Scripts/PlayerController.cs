@@ -6,12 +6,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
-    Vector3 startPos;
-    Vector3 endPos;
-    public Vector3 direction;
+    Vector2 startPos;
+    Vector2 endPos;
+    public Vector3 direction,fingerDirection;
     public float speed = 5f;
     [SerializeField] Camera cam;
     [SerializeField] float vel;
+    RaycastHit2D hit;
     
 
     private void Start()
@@ -21,27 +22,17 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButton(0))
         {
-            startPos = cam.ScreenToWorldPoint(Input.mousePosition); //Detectar donde se pulso la pantalla
-        }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            endPos = cam.ScreenToWorldPoint(Input.mousePosition); //Detectar donde se dejo de presionar la pantalla
-            Debug.DrawLine(startPos, endPos, Color.red, 1f); 
-            direction = endPos - startPos; //Direccion desde donde se pulso la pantalla hasta donde se solto
-            //Debug.Log(direction.magnitude);
+            startPos = transform.position; //Detectar donde se pulso la pantalla
+            endPos = cam.ScreenToWorldPoint(Input.mousePosition);
+            direction = endPos - startPos;
             rb.velocity = direction.normalized * speed; //Da movimiento al jugador segun la direccion normalizada por la velocidad
-        }
-
-        if(direction.magnitude < 1)
+        } else
         {
             rb.velocity = Vector2.zero; //Si la pantalla se presiono sin arrastrar lo suficiente el dedo, el jugador se detendrá;
         }
         vel = rb.velocity.magnitude;
 
     }
-
-
 }

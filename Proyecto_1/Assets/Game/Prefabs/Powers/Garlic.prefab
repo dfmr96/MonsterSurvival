@@ -115,13 +115,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdc079244a3d3a64c8fdd33d1a62b3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  objectsInsideArea: []
-  radiusOfDamage: 3
+  player: {fileID: 0}
+  enemiesInsideArea: []
   mask:
     serializedVersion: 2
     m_Bits: 8
-  weaponCooldown: 1
+  coolDownCounter: 0
+  powerInfo: {fileID: 9077006291436154929}
 --- !u!114 &9077006291436154929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,4 +137,12 @@ MonoBehaviour:
   powerName: Garlic
   powerDescription: Create an aura that deal damage to surrounding enemies
   powerIcon: {fileID: 1102613802, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
-  level: 1
+  currentLevel: 1
+  maxLevel: 0
+  health: 0
+  defense: 0
+  damage: 3
+  angularSpeed: 0
+  speed: 0
+  coolDown: 1
+  radius: 3

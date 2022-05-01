@@ -60,6 +60,5 @@ public class PlayerStats : MonoBehaviour
         }
 
         health -= damage;
-        Debug.Log("Recibio" + damage);
     }
 }

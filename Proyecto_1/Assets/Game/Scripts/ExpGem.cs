@@ -12,7 +12,6 @@ public class ExpGem : MonoBehaviour
         {
             if (collision.CompareTag("GemTaker"))
             {
-            Debug.Log("Gema recogida");
             collision.GetComponentInParent<PlayerStats>().AddExperience(exp);
             Destroy(gameObject);
             }

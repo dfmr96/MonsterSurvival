@@ -4,33 +4,38 @@ using UnityEngine;
 
 public class ItemDamage : MonoBehaviour
 {
-    [SerializeField] int damage;
-    [SerializeField] Collider2D[] objectsInsideArea;
-    [SerializeField] float radiusOfDamage = 0.5f;
+    public Transform player;
+    [SerializeField] Collider2D[] enemiesInsideArea;
     [SerializeField] LayerMask mask;
-    [SerializeField] float weaponCooldown = 2f;
-    PlayerStats playerStats;
+    [SerializeField] float coolDownCounter;
+    [SerializeField] PowerInfo powerInfo;
+
     public void Start()
     {
-        playerStats = FindObjectOfType<PlayerStats>();
-        StartCoroutine(DamageEnemy());
+        player = FindObjectOfType<PlayerController>().transform;
+        transform.position = player.position;
+        coolDownCounter = 0;
     }
     private void Update()
     {
-        objectsInsideArea = Physics2D.OverlapCircleAll(transform.position, radiusOfDamage, mask);
-        transform.position = FindObjectOfType<PlayerController>().transform.position;
+        transform.position = player.position;
+        coolDownCounter += Time.deltaTime;
 
+        if (coolDownCounter >= powerInfo.coolDown)
+        {
+            DamageEnemies();
+            coolDownCounter = 0;
+        }
     }
 
-    IEnumerator DamageEnemy()
+    public void DamageEnemies()
     {
-        while (true)
+        enemiesInsideArea = Physics2D.OverlapCircleAll(transform.position, powerInfo.radius, mask);
+
+        foreach (Collider2D enemyCol in enemiesInsideArea)
         {
-            foreach (Collider2D collider2D in objectsInsideArea)
-            {
-                collider2D.GetComponent<EnemyStats>().TakeDamage(damage);
-            }
-            yield return new WaitForSeconds(weaponCooldown);
+            enemyCol.GetComponent<EnemyStats>().TakeDamage(powerInfo.damage);
+
         }
     }
 

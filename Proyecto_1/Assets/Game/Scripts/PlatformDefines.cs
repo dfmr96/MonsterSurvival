@@ -8,7 +8,6 @@ public class PlatformDefines : MonoBehaviour
     void Start()
     {
 #if UNITY_EDITOR
-        Debug.Log("Unity Editor");
         Application.targetFrameRate = 60;
 #endif
 #if UNITY_IOS

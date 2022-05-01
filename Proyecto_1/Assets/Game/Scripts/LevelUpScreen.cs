@@ -20,7 +20,6 @@ public class LevelUpScreen : MonoBehaviour
         ShowPower1();
         ShowPower2();
         ShowPower3();
-        powerUpsPoolManager.CopyList();
 
 
 
@@ -53,7 +52,7 @@ public class LevelUpScreen : MonoBehaviour
             power1Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower1].GetComponent<PowerInfo>().powerIcon;
 
         }
-           powerUpsPoolManager.powerUps.RemoveAt(randomPower1);
+          // powerUpsPoolManager.powerUps.RemoveAt(randomPower1);
     }
 
     public void ShowPower2()
@@ -61,6 +60,12 @@ public class LevelUpScreen : MonoBehaviour
         randomPower2 = Random.Range(0, powerUpsPoolManager.powerUps.Count);
         Debug.Log(randomPower2);
         power2Info = powerUpsPoolManager.powerUps[randomPower2].GetComponent<PowerInfo>();
+
+        while(randomPower2==randomPower1)
+        {
+            ShowPower2();
+            Debug.Log("Poder 2 = 1");
+        }
 
         if (GameObject.FindGameObjectWithTag(power2Info.powerName) == null)
         {
@@ -77,7 +82,7 @@ public class LevelUpScreen : MonoBehaviour
             power2Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower2].GetComponent<PowerInfo>().powerIcon;
 
         }
-           powerUpsPoolManager.powerUps.RemoveAt(randomPower2);
+           //powerUpsPoolManager.powerUps.RemoveAt(randomPower2);
     }
 
     public void ShowPower3()
@@ -85,6 +90,12 @@ public class LevelUpScreen : MonoBehaviour
         randomPower3 = Random.Range(0, powerUpsPoolManager.powerUps.Count);
         Debug.Log(randomPower3);
         power3Info = powerUpsPoolManager.powerUps[randomPower3].GetComponent<PowerInfo>();
+
+        while (randomPower3 == randomPower1 || randomPower3 == randomPower2)
+        {
+            ShowPower3();
+            Debug.Log("Poder 3 = 1 || poder 3 = 1");
+        }
 
         if (GameObject.FindGameObjectWithTag(power3Info.powerName) == null)
         {
@@ -101,27 +112,31 @@ public class LevelUpScreen : MonoBehaviour
             power3Icon.GetComponent<Image>().sprite = powerUpsPoolManager.powerUps[randomPower3].GetComponent<PowerInfo>().powerIcon;
 
         }
-        powerUpsPoolManager.powerUps.RemoveAt(randomPower3);
+        //powerUpsPoolManager.powerUps.RemoveAt(randomPower3);
 
     }
 
     public void ChoosePower1()
     {
-        HideLevelupScreen();
         powersManager.CheckRandomPower(randomPower1);
+        powerUpsPoolManager.CopyList();
+        HideLevelupScreen();
+
 
     }
 
     public void ChoosePower2()
     {
-        HideLevelupScreen();
         powersManager.CheckRandomPower(randomPower2);
+        powerUpsPoolManager.CopyList();
+        HideLevelupScreen();
 
     }
     public void ChoosePower3()
     {
-        HideLevelupScreen();
         powersManager.CheckRandomPower(randomPower3);
+        powerUpsPoolManager.CopyList();
+        HideLevelupScreen();
 
     }
 }

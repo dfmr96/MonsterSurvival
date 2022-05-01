@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2862261659086918392}
   - component: {fileID: 2862261659086918395}
   - component: {fileID: 2359901236654701302}
-  - component: {fileID: 3327095055417115590}
+  - component: {fileID: 2765045546378262938}
   m_Layer: 6
   m_Name: Knife
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1108723804, guid: d40b437cb96eab3449fbdb3177503c10, type: 3}
+  m_Sprite: {fileID: -296711005, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,8 +122,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &3327095055417115590
-PolygonCollider2D:
+--- !u!70 &2765045546378262938
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -135,21 +135,6 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.1601737, y: 0.5}
-      - {x: -0.4038958, y: 0.07694789}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.0048697293, y: -0.4038958}
-      - {x: 0.52402604, y: 0.20178658}
-      - {x: 0.5, y: 0.5}
+  m_Offset: {x: -0.094517134, y: -0.048930757}
+  m_Size: {x: 1.0356302, y: 0.61202985}
+  m_Direction: 1

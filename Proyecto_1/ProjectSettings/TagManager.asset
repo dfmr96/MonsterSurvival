@@ -12,6 +12,8 @@ TagManager:
   - Health Up
   - Speed Up
   - Defense Up
+  - Lightning Ring
+  - Boomeran
   layers:
   - Default
   - TransparentFX
