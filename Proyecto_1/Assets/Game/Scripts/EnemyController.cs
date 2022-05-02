@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] EnemyStats enemyStats;
     public float attackDelayCounter = 0f;
     bool canAttack;
+    SpriteRenderer sprite;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,7 @@ public class EnemyController : MonoBehaviour
         player = FindObjectOfType<PlayerController>().transform;
         playerStats = FindObjectOfType<PlayerStats>();
         enemyStats = gameObject.GetComponent<EnemyStats>();
-
+        sprite = FindObjectOfType<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -29,6 +30,14 @@ public class EnemyController : MonoBehaviour
         {
             playerStats.TakeDamage(enemyStats.attackDamage);
             attackDelayCounter = 0f;
+        }
+
+        if (direction.x < 0)
+        {
+            sprite.flipX = true;
+        } else
+        {
+            sprite.flipX = false;
         }
     }
 

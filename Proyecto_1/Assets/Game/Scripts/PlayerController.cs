@@ -11,13 +11,14 @@ public class PlayerController : MonoBehaviour
     public Vector3 direction,fingerDirection;
     public float speed = 5f;
     [SerializeField] Camera cam;
-    [SerializeField] float vel;
-    RaycastHit2D hit;
+    public SpriteRenderer sprite;
+    
     
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -32,7 +33,13 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = Vector2.zero; //Si la pantalla se presiono sin arrastrar lo suficiente el dedo, el jugador se detendrá;
         }
-        vel = rb.velocity.magnitude;
 
+        if( direction.x < 0)
+        {
+            sprite.flipX = true;
+        } else
+        {
+            sprite.flipX = false;
+        }
     }
 }
