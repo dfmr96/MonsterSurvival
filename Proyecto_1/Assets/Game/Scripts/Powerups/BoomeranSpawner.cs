@@ -18,7 +18,7 @@ public class BoomeranSpawner : MonoBehaviour
 
     private void Update()
     {
-        //Couldown counter
+        //Cooldown counter
         coolDownCounter += Time.deltaTime;
 
         //Countdown reset and create projectile

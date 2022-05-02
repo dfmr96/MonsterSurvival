@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8276720445470426369}
   - component: {fileID: -4112696863674014271}
   - component: {fileID: 736916233415388732}
-  - component: {fileID: 7089498593841928150}
   m_Layer: 0
   m_Name: Boomeran
   m_TagString: Untagged
@@ -121,13 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b94b188850bab84eb41ff04884a120d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerInfo: {fileID: 5810927628026433495, guid: d4b2822e6886ee34c9ee35a6288c5b62, type: 3}
   boomeranHealth: 0
   boomeranSpeed: 0
   boomeranDamage: 0
-  boomeranBonusHealth: 0
-  boomeranBonusSpeed: 0
-  boomeranBonusDamage: 0
 --- !u!58 &736916233415388732
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -144,16 +139,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.45
---- !u!114 &7089498593841928150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4335379817415681821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d605a17dec4aa4459bdcfec9972d1f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerInfo: {fileID: 5810927628026433495, guid: d4b2822e6886ee34c9ee35a6288c5b62, type: 3}

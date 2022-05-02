@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5254866063578609872}
   - component: {fileID: 5254866063578609873}
   - component: {fileID: -7925701590278452707}
-  - component: {fileID: 822068126085916548}
   m_Layer: 6
   m_Name: KnifeSpawner
   m_TagString: Knife
@@ -46,8 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8110ddefe64904bb23b54b3cd14a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  powerInfo: {fileID: -7925701590278452707}
   knifePrefab: {fileID: 2862261659086918397, guid: 5f8eb01a6f1433a468f93fad70242390, type: 3}
+  coolDownCounter: 0
 --- !u!114 &-7925701590278452707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,24 +64,12 @@ MonoBehaviour:
   powerDescription: Throw a knife at the last direction
   powerIcon: {fileID: -296711005, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
   currentLevel: 1
-  maxLevel: 0
-  health: 0
+  maxLevel: 5
+  leveledUp: 0
+  health: 1
   defense: 0
   damage: 0
   angularSpeed: 0
-  speed: 0
-  coolDown: 0
+  speed: 15
+  coolDown: 1
   radius: 0
---- !u!114 &822068126085916548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5254866063578609875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d605a17dec4aa4459bdcfec9972d1f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerInfo: {fileID: -7925701590278452707}

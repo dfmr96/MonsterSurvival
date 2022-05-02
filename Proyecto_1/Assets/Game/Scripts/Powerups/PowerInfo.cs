@@ -19,6 +19,7 @@ public class PowerInfo : MonoBehaviour
     public float speed;
     public float coolDown;
     public float radius;
+    public int projectiles;
 
     private void Start()
     {

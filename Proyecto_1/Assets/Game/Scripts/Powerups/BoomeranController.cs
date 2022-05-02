@@ -35,7 +35,7 @@ public class BoomeranController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Boomeran speed
+        //Boomeran movement
         transform.position += direction.normalized * boomeranSpeed * Time.deltaTime;
 
         //Boomeran destroy

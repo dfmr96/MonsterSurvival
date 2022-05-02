@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5147963109617955825}
   - component: {fileID: 5147963109617955824}
   - component: {fileID: -6431254557341960164}
-  - component: {fileID: -9074358555088056237}
   m_Layer: 6
   m_Name: ShurikenSpawner
   m_TagString: Shuriken
@@ -46,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b4d402919b25f4f8d811a360c36780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 3
+  powerInfo: {fileID: -6431254557341960164}
   shurikenPrefab: {fileID: 8324569980205961621, guid: 5c485b6acfcd5704ab848699a1757cc1, type: 3}
   shurikenPrefabs: []
   shurikenAmount: 0
@@ -67,24 +66,13 @@ MonoBehaviour:
   powerDescription: Summon an amount of shuriken that spin around
   powerIcon: {fileID: -1852582129, guid: 792fb709a142fb948b8de7a24b534f1a, type: 3}
   currentLevel: 1
-  maxLevel: 0
-  health: 0
+  maxLevel: 5
+  leveledUp: 0
+  health: 5
   defense: 0
-  damage: 0
-  angularSpeed: 0
+  damage: 1
+  angularSpeed: 2
   speed: 0
-  coolDown: 0
-  radius: 0
---- !u!114 &-9074358555088056237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5147963109617955839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d605a17dec4aa4459bdcfec9972d1f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerInfo: {fileID: -6431254557341960164}
+  coolDown: 5
+  radius: 3
+  projectiles: 5

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1621467079224398598}
   - component: {fileID: 1621467079224398599}
   - component: {fileID: 9077006291436154929}
-  - component: {fileID: 4504456133123442909}
   m_Layer: 6
   m_Name: Garlic
   m_TagString: Garlic
@@ -140,6 +139,7 @@ MonoBehaviour:
   powerIcon: {fileID: 1102613802, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
   currentLevel: 1
   maxLevel: 0
+  leveledUp: 0
   health: 0
   defense: 0
   damage: 3
@@ -147,16 +147,3 @@ MonoBehaviour:
   speed: 0
   coolDown: 1
   radius: 3
---- !u!114 &4504456133123442909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621467079224398597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d605a17dec4aa4459bdcfec9972d1f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerInfo: {fileID: 9077006291436154929}

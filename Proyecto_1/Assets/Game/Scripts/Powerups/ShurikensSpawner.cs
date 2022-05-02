@@ -1,100 +1,125 @@
-using System.Collections;
 using UnityEngine;
 
 public class ShurikensSpawner : MonoBehaviour
 {
-
-    int numberOfObjects = 5;
-    [SerializeField] float spawnRate;
+    public PowerInfo powerInfo;
     Transform player;
     [SerializeField] GameObject shurikenPrefab;
     [SerializeField] GameObject[] shurikenPrefabs;
     public int shurikenAmount = 0;
     public bool canSpawnShuriken;
-    System.Threading.Timer timer;
-
     float timeCounter = 0;
     bool needRespawn = false;
-	float needToRespawnTime = 0;
+    float needToRespawnTime = 0;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-    	shurikenPrefabs = new GameObject[numberOfObjects];
+        //var init
+        shurikenPrefabs = new GameObject[powerInfo.projectiles];
         player = FindObjectOfType<PlayerController>().transform;
-        // StartCoroutine(ShurikenSpawner());
 
-		crearAllShuriken();
-		// crearShurikenAfter(5000);
+        crearAllShuriken();
     }
 
-  //   void activatedAllShurikensAfter(int miliseconds) {
-  //   	Debug.Log("testing Timer before");
-		// timer = new System.Threading.Timer((obj) => {
-  //       	canSpawn = true;
-	 //        crearAllShuriken();
-  //       	timer.Dispose();
-	 //    }, null, miliseconds, 1000);
-  //   }
+    private void Update()
 
-    void crearAllShuriken() {
-    	int radius = 3;
-    	for (int i = 0; i < numberOfObjects; i++)  {
+    {
+        RotateShurikens();
 
-			float angle = i * Mathf.PI * 2 / numberOfObjects;
-			float x = Mathf.Cos(angle) * radius;
-			float z = Mathf.Sin(angle) * radius;
-			Vector3 pos = new Vector3(x, z, 0);
-
-	        GameObject shuriken = Instantiate(shurikenPrefab, pos, Quaternion.identity);  		
-    		shurikenPrefabs[i] = shuriken;
-    	}
+        //Check level up
+        if (powerInfo.leveledUp)
+        {
+            UpdateStats();
+            powerInfo.leveledUp = false;
+        }
     }
 
-    void Update() {
-		Transform player = FindObjectOfType<PlayerController>().transform;
-		int radius = 3;
-		timeCounter += Time.deltaTime;
+    void RotateShurikens()
+    {
+        timeCounter += Time.deltaTime;
+        float angularSpeed = powerInfo.angularSpeed * timeCounter;
+        var allNotActive = true;
 
-		var allNotActive = true;
+        for (int i = 0; i < powerInfo.projectiles; i++)
+        {
+            float angle = i * Mathf.PI * 2 / powerInfo.projectiles;
+            float x = Mathf.Cos(angle + angularSpeed) * powerInfo.radius;
+            float y = Mathf.Sin(angle + angularSpeed) * powerInfo.radius;
+            Vector3 pos = new Vector3(x, y, 0);
 
-		for (int i = 0; i < numberOfObjects; i++)  {
-			float angle = i * Mathf.PI * 2 / numberOfObjects;
-			float x = Mathf.Cos(angle + timeCounter) * radius;
-			float z = Mathf.Sin(angle + timeCounter) * radius;
-			Vector3 pos = new Vector3(x, z, 0);
+            shurikenPrefabs[i].transform.position = pos + player.position;
 
-			shurikenPrefabs[i].transform.position = pos + player.position;
+            allNotActive = allNotActive && !shurikenPrefabs[i].activeSelf;
+        }
 
-			allNotActive = allNotActive && !shurikenPrefabs[i].activeSelf;
-		}
+        if (allNotActive && needToRespawnTime == 0)
+        {
+            needToRespawnTime = Time.fixedTime;
+            needRespawn = true;
+        }
 
-		if (allNotActive && needToRespawnTime == 0) {
-			needToRespawnTime = Time.fixedTime;
-			needRespawn = true;
-		}
 
-			
-		if (needRespawn && (Time.fixedTime - needToRespawnTime > 5.0)) {
-			for (int i = 0; i < numberOfObjects; i++)  {
-				 shurikenPrefabs[i].GetComponent<ShurikenController1>().shurikenHealth = 5;
-				 shurikenPrefabs[i].SetActive(true);
-			}
-			needRespawn = false;
-			needToRespawnTime = 0;
-		}
+        if (needRespawn && (Time.fixedTime - needToRespawnTime > powerInfo.coolDown))
+        {
+            for (int i = 0; i < powerInfo.projectiles; i++)
+            {
+                shurikenPrefabs[i].SetActive(true);
+            }
+            needRespawn = false;
+            needToRespawnTime = 0;
+        }
+    }
+    void crearAllShuriken()
+    {
+
+        for (int i = 0; i < powerInfo.projectiles; i++)
+        {
+
+            float angle = i * Mathf.PI * 2 / powerInfo.projectiles;
+            float x = Mathf.Cos(angle) * powerInfo.radius;
+            float z = Mathf.Sin(angle) * powerInfo.radius;
+            Vector3 pos = new Vector3(x, z, 0);
+
+            GameObject shuriken = Instantiate(shurikenPrefab, pos, Quaternion.identity);
+            shurikenPrefabs[i] = shuriken;
+        }
     }
 
-    // IEnumerator ShurikenSpawner()
-    // {
-    //     while (true)
-    //     {
-    //         {
-    //             // yield return new WaitForSeconds(spawnRate);
-    //             // Instantiate(shurikenPrefab, player.position, Quaternion.identity);
-    //             // shurikenAmount++;
-    //         }
+    public void UpdateStats()
+    {
+        switch (powerInfo.currentLevel)
+        {
+            case 1:
+                Debug.Log(powerInfo.name + "Nivel 1");
+                powerInfo.powerDescription = "Increase damage by 1";
+                break;
 
-    //     }
-    // }
+
+            case 2:
+                Debug.Log(powerInfo.name + "Subido a nivel 2");
+                powerInfo.powerDescription = "Increase shuriken health by 1";
+                powerInfo.damage++;
+                break;
+
+            case 3:
+                Debug.Log(powerInfo.name + "Subido a nivel 3");
+                powerInfo.powerDescription = "Increase speed by 40%";
+                powerInfo.health++;
+                break;
+
+            case 4:
+                Debug.Log(powerInfo.name + "Subido a nivel 4");
+                powerInfo.powerDescription = "Decrease cooldown by 25%";
+                powerInfo.angularSpeed *= 1.4f;
+                break;
+
+            case 5:
+                Debug.Log(powerInfo.name + "Subido a nivel 5");
+                powerInfo.coolDown *= 0.75f;
+                break;
+
+
+        }
+    }
 }
