@@ -7,7 +7,7 @@ public class ShurikenController : MonoBehaviour
     Transform player;
     Vector3 vectorPosition;
     ShurikensSpawner spawner;
-    [SerializeField] float shurikenHealth, shurikenDamage;
+    public float shurikenHealth, shurikenDamage;
 
     void Start()
     {

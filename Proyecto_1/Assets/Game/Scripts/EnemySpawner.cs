@@ -1,11 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] GameObject[] enemyPrefab;
-    [SerializeField] float enemySpawnDelay = 10;
+    [SerializeField] float enemySpawnDelay = 1f;
     [SerializeField] float maxSpawnRadius;
     [SerializeField] float minSpawnRadius;
     [SerializeField] Transform player;
@@ -13,6 +12,26 @@ public class EnemySpawner : MonoBehaviour
     {
         player = FindObjectOfType<PlayerController>().transform;
         StartCoroutine(EnemySpawnerRoutine());
+    }
+
+    private void Update()
+    {
+        if (GameManager.sharedInstance.enemiesKilled == 40)
+        {
+            enemySpawnDelay = 0.5f;
+        }
+        else if (GameManager.sharedInstance.enemiesKilled == 80)
+        {
+            enemySpawnDelay = 0.4f;
+        }
+        else if (GameManager.sharedInstance.enemiesKilled == 160)
+        {
+            enemySpawnDelay = 0.3f;
+        }
+        else if (GameManager.sharedInstance.enemiesKilled == 320)
+        {
+            enemySpawnDelay = 0.1f;
+        }
     }
     IEnumerator EnemySpawnerRoutine()
     {
@@ -30,5 +49,7 @@ public class EnemySpawner : MonoBehaviour
         Gizmos.DrawWireSphere(player.transform.position, minSpawnRadius);
         Gizmos.DrawWireSphere(player.transform.position, maxSpawnRadius);
     }
-    
+
+
 }
+

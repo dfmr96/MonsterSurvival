@@ -45,15 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee027a1cf04db44a9830b01d0f91f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier:
-  - 1
-  - 1.1
-  - 1.15
-  - 1.2
-  - 1.3
-  - 1.35
-  - 1.4
-  - 1.5
+  powerInfo: {fileID: -4150153141311135467}
+  playerController: {fileID: 0}
 --- !u!114 &-4150153141311135467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,3 +72,4 @@ MonoBehaviour:
   speed: 0
   coolDown: 0
   radius: 0
+  projectiles: 0

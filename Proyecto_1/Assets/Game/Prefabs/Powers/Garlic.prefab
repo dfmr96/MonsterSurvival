@@ -142,8 +142,9 @@ MonoBehaviour:
   leveledUp: 0
   health: 0
   defense: 0
-  damage: 3
+  damage: 2
   angularSpeed: 0
   speed: 0
-  coolDown: 1
+  coolDown: 2
   radius: 3
+  projectiles: 0

@@ -33,7 +33,7 @@ public class LevelUpScreen : MonoBehaviour
 
     public void ShowPower1()
     {
-        randomPower1 = Random.Range(0, powerUpsPoolManager.powerUps.Count);
+        randomPower1 = 5;//Random.Range(0, powerUpsPoolManager.powerUps.Count);
        // Debug.Log(randomPower1);
         power1Info = powerUpsPoolManager.powerUps[randomPower1].GetComponent<PowerInfo>();
 

@@ -28,8 +28,17 @@ public class LightningRing : MonoBehaviour
         if (coolDownCounter >= powerInfo.coolDown)
         {
             getClosestEnemy();
-            closestEnemy.GetComponent<EnemyStats>().TakeDamage(powerInfo.damage);
             coolDownCounter = 0f;
+            if (closestEnemy != null)
+            {
+                closestEnemy.GetComponent<EnemyStats>().TakeDamage(powerInfo.damage);
+            }
+        }
+
+        if (powerInfo.leveledUp)
+        {
+            UpdateStats();
+            powerInfo.leveledUp = false;
         }
 
     }
@@ -41,12 +50,50 @@ public class LightningRing : MonoBehaviour
         {
             float currentDistance;
             currentDistance = Vector3.Distance(transform.position, enemyCol.transform.position);
-            if(currentDistance<closestDistance)
+            if (currentDistance < closestDistance)
             {
                 closestDistance = currentDistance;
                 closestEnemy = enemyCol.gameObject;
             }
         }
         return closestEnemy;
+    }
+
+    public void UpdateStats()
+    {
+        switch (powerInfo.currentLevel)
+        {
+            case 1:
+                Debug.Log(powerInfo.name + "Nivel 1");
+                powerInfo.powerDescription = "Increase radius by 50%";
+
+                break;
+
+
+            case 2:
+                Debug.Log(powerInfo.name + "Subido a nivel 2");
+                powerInfo.powerDescription = "Decrease cooldown by 25%";
+                powerInfo.radius *= 1.5f;
+                break;
+
+            case 3:
+                Debug.Log(powerInfo.name + "Subido a nivel 3");
+                powerInfo.powerDescription = "Increase damage by 5";
+                powerInfo.coolDown *= 0.75f;
+                break;
+
+            case 4:
+                Debug.Log(powerInfo.name + "Subido a nivel 4");
+                powerInfo.powerDescription = "Decrease cooldown by 50%";
+                powerInfo.damage += 5;
+                break;
+
+            case 5:
+                powerInfo.powerDescription = "Increase damage by 5";
+                powerInfo.coolDown *= 0.5f;
+                break;
+
+
+        }
     }
 }

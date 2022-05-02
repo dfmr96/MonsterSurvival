@@ -45,16 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2c26f89d4444e34f9eb73e645c497ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthMultiplier:
-  - 1.1
-  - 1.125
-  - 1.15
-  - 1.25
-  - 1.3
-  - 1.35
-  - 1.45
-  - 1.5
-  skillName: HealthUp
+  powerInfo: {fileID: 576943412443592047}
 --- !u!114 &576943412443592047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,3 +71,4 @@ MonoBehaviour:
   speed: 0
   coolDown: 0
   radius: 0
+  projectiles: 0

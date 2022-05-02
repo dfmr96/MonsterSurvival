@@ -25,7 +25,6 @@ public class ShurikensSpawner : MonoBehaviour
     private void Update()
 
     {
-        RotateShurikens();
 
         //Check level up
         if (powerInfo.leveledUp)
@@ -33,10 +32,7 @@ public class ShurikensSpawner : MonoBehaviour
             UpdateStats();
             powerInfo.leveledUp = false;
         }
-    }
 
-    void RotateShurikens()
-    {
         timeCounter += Time.deltaTime;
         float angularSpeed = powerInfo.angularSpeed * timeCounter;
         var allNotActive = true;
@@ -64,6 +60,7 @@ public class ShurikensSpawner : MonoBehaviour
         {
             for (int i = 0; i < powerInfo.projectiles; i++)
             {
+                shurikenPrefabs[i].GetComponent<ShurikenController>().shurikenHealth = powerInfo.health;
                 shurikenPrefabs[i].SetActive(true);
             }
             needRespawn = false;
