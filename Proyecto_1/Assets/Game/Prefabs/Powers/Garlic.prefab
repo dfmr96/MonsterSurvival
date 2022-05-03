@@ -119,7 +119,7 @@ MonoBehaviour:
   enemiesInsideArea: []
   mask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   coolDownCounter: 0
   powerInfo: {fileID: 9077006291436154929}
 --- !u!114 &9077006291436154929

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3738068023836806542}
   - component: {fileID: 3738068023836806540}
   m_Layer: 0
-  m_Name: FoodSpawner
+  m_Name: PotSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,10 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9f2040747a33847b6145855cf8bc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodPrefab:
-  - {fileID: 3876637442257871562, guid: 8f92b80405a98ea45af85627cac378e2, type: 3}
-  - {fileID: 7904016425137448662, guid: 1fa88b5871ced9a45a017a24fda18321, type: 3}
-  foodSpawnDelay: 1
+  potPrefab:
+  - {fileID: 6732549688080302870, guid: 985e3ead8c73cf94f88f00d28f5caf85, type: 3}
+  potSpawnDelay: 5
   maxSpawnRadius: 20
   minSpawnRadius: 18
   player: {fileID: 0}

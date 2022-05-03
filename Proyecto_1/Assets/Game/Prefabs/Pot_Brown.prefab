@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4557670055795207541}
   - component: {fileID: 16783871461559514}
   - component: {fileID: 6590731062116470751}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Pot_Brown
   m_TagString: Breakable
   m_Icon: {fileID: 0}

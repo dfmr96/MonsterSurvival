@@ -44,6 +44,10 @@ public class KnifeController : MonoBehaviour
         {
             collision.GetComponent<EnemyStats>().TakeDamage(knifeDamage);
             knifeHealth--;
+        } else if (collision.CompareTag("Breakable"))
+        {
+            collision.GetComponent<PotBreakable>().TakeDamage(knifeDamage);
+            knifeHealth--;
         }
     }
 }

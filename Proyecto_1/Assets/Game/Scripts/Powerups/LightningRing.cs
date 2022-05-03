@@ -31,7 +31,14 @@ public class LightningRing : MonoBehaviour
             coolDownCounter = 0f;
             if (closestEnemy != null)
             {
-                closestEnemy.GetComponent<EnemyStats>().TakeDamage(powerInfo.damage);
+                if (closestEnemy.CompareTag("Enemy"))
+                {
+                    closestEnemy.GetComponent<EnemyStats>().TakeDamage(powerInfo.damage);
+                }
+                else if (closestEnemy.CompareTag("Breakable"))
+                {
+                    closestEnemy.GetComponent<PotBreakable>().TakeDamage(powerInfo.damage);
+                }
             }
         }
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemDamage : MonoBehaviour
+public class Garlic : MonoBehaviour
 {
     public Transform player;
     [SerializeField] Collider2D[] enemiesInsideArea;
@@ -32,17 +32,18 @@ public class ItemDamage : MonoBehaviour
     {
         enemiesInsideArea = Physics2D.OverlapCircleAll(transform.position, powerInfo.radius, mask);
 
-        foreach (Collider2D enemyCol in enemiesInsideArea)
+        foreach (Collider2D collision in enemiesInsideArea)
         {
-            enemyCol.GetComponent<EnemyStats>().TakeDamage(powerInfo.damage);
+            if (collision.CompareTag("Enemy"))
+            {
+                collision.GetComponent<EnemyStats>().TakeDamage(powerInfo.damage);
+            } else if (collision.CompareTag("Breakable"))
+            {
+                collision.GetComponent<PotBreakable>().TakeDamage(powerInfo.damage);
+            }
 
         }
     }
 
-   /* private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radiusOfDamage);
-    }
-   */
+
 }

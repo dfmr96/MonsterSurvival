@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class FoodSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject[] foodPrefab;
-    [SerializeField] float foodSpawnDelay, maxSpawnRadius, minSpawnRadius;
+    [SerializeField] GameObject[] potPrefab;
+    [SerializeField] float potSpawnDelay, maxSpawnRadius, minSpawnRadius;
     [SerializeField] Transform player;
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<PlayerController>().transform;
-        StartCoroutine(FoodSpawnerRoutine());
+        StartCoroutine(PotSpawnerRoutine());
 
     }
 
-    IEnumerator FoodSpawnerRoutine()
+    IEnumerator PotSpawnerRoutine()
     {
         while (true)
         {
             Vector2 randomPosition = (Vector2)player.transform.position + Random.insideUnitCircle.normalized * Random.Range(minSpawnRadius, maxSpawnRadius);
-            int random = Random.Range(0, foodPrefab.Length);
-            Instantiate(foodPrefab[random], randomPosition, Quaternion.identity);
-            yield return new WaitForSeconds(foodSpawnDelay);
+            int random = Random.Range(0, potPrefab.Length);
+            Instantiate(potPrefab[random], randomPosition, Quaternion.identity);
+            yield return new WaitForSeconds(potSpawnDelay);
         }
     }
 }

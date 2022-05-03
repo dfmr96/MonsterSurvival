@@ -54,6 +54,12 @@ public class BoomeranController : MonoBehaviour
             boomeranHealth--;
             collision.collider.GetComponent<EnemyStats>().TakeDamage(boomeranDamage);
             direction = Vector2.Reflect(direction, (Vector2)collision.contacts[0].normal);
+        } else if (collision.gameObject.CompareTag("Breakable"))
+        {
+            boomeranHealth--;
+            collision.collider.GetComponent<PotBreakable>().TakeDamage(boomeranDamage);
+            direction = Vector2.Reflect(direction, (Vector2)collision.contacts[0].normal);
+
         }
     }
 

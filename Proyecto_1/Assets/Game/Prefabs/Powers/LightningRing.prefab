@@ -51,7 +51,7 @@ MonoBehaviour:
   closestEnemy: {fileID: 0}
   mask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   coolDownCounter: 0
   powerInfo: {fileID: 1250034887417840806}
 --- !u!114 &1250034887417840806
@@ -79,6 +79,7 @@ MonoBehaviour:
   speed: 0
   coolDown: 3
   radius: 10
+  projectiles: 0
 --- !u!58 &7644391527852492096
 CircleCollider2D:
   m_ObjectHideFlags: 0
