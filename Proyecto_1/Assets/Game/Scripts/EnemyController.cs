@@ -9,6 +9,8 @@ public class EnemyController : MonoBehaviour
     public float attackDelayCounter = 0f;
     bool canAttack;
     SpriteRenderer sprite;
+    [SerializeField] float enemyResetDistance;
+    [SerializeField] float enemyResetCounter;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,7 @@ public class EnemyController : MonoBehaviour
         direction = player.position - transform.position; //Direccion hacia donde esta el jugador
         transform.position += (Vector3)direction.normalized * enemyStats.speed * Time.deltaTime; //Movimiento en direccion al jugador detectado
         attackDelayCounter += Time.deltaTime;
+        enemyResetCounter += Time.deltaTime;
 
         if (attackDelayCounter > enemyStats.attackDelay && canAttack)
         {
@@ -38,6 +41,12 @@ public class EnemyController : MonoBehaviour
         } else
         {
             sprite.flipX = false;
+        }
+
+        if(Vector2.Distance(transform.position, player.position) > enemyResetDistance && enemyResetCounter >= 1f)
+        {
+            transform.position = player.position + (Vector3)direction;
+            enemyResetCounter = 0;
         }
     }
 

@@ -37,5 +37,10 @@ public class ShurikenController : MonoBehaviour
             collision.GetComponent<EnemyStats>().TakeDamage(shurikenDamage);
             shurikenHealth--;
         }
+
+        if (collision.CompareTag("Breakable"))
+        {
+            collision.GetComponent<PotBreakable>().TakeDamage(shurikenDamage);
+        }
     }
 }

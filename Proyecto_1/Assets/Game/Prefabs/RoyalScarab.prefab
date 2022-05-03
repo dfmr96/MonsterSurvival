@@ -103,6 +103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats: {fileID: -4656408657029819649}
   attackDelayCounter: 0
+  enemyResetDistance: 21
+  enemyResetCounter: 0
 --- !u!114 &-4656408657029819649
 MonoBehaviour:
   m_ObjectHideFlags: 0
