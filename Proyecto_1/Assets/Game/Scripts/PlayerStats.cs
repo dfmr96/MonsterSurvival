@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class PlayerStats : MonoBehaviour
     public int currentLevel;
     public int currentExp;
     public int[] expToLevelUp;
+    public GameObject showDamage;
 
     private void Start()
     {
@@ -58,7 +60,9 @@ public class PlayerStats : MonoBehaviour
                 damage -= defense;
             }
         }
-
+        var damageShown = Instantiate(showDamage, transform.position, Quaternion.Euler(Vector3.zero));
+        damageShown.GetComponentInChildren<TMP_Text>().color = Color.red;
+        damageShown.GetComponent<DamageNumber>().damagePoints = damage;
         health -= damage;
     }
 }

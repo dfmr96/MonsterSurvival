@@ -10,6 +10,7 @@ public class KnifesSpawner : MonoBehaviour
     {
         //Var init
         player = FindObjectOfType<PlayerController>().transform;
+        powerInfo = GetComponent<PowerInfo>();
         coolDownCounter = 0f;
 
     }

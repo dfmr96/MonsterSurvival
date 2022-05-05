@@ -115,3 +115,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthRecovery: 10
+  showHealthRecovery: {fileID: 5256549769481028063, guid: 616ce6c2765962c46979482457e5f87b, type: 3}

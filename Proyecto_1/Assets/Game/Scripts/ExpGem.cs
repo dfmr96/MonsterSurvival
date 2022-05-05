@@ -13,6 +13,7 @@ public class ExpGem : MonoBehaviour
             if (collision.CompareTag("GemTaker"))
             {
             collision.GetComponentInParent<PlayerStats>().AddExperience(exp);
+                AudioManager.sharedInstance.GemPicked();
             Destroy(gameObject);
             }
         }

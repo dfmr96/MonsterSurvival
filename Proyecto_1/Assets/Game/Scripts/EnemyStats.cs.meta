@@ -3,7 +3,11 @@ guid: ec7bdcb8617bab94ba4fd65b07451193
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - showDamage: {fileID: 5256549769481028063, guid: 616ce6c2765962c46979482457e5f87b, type: 3}
+  - unwounded: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - wounded: {fileID: 2100000, guid: 2356e016390f4064fb721b2a785b9408, type: 2}
+  - gemPrefab: {fileID: 5897675193580475937, guid: 5bcdb7dfb9c15bf44850c061ee348663, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
