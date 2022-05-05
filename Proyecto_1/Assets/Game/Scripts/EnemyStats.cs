@@ -8,14 +8,18 @@ public class EnemyStats : MonoBehaviour
     public float speed = 3f;
     public float attackSpeed = 1f, attackDelay = 2f;
     public float attackDamage = 1f;
+    public GameObject showDamage;
+    bool enemyWounded = false;
+    public Material unwounded, wounded; 
     [SerializeField] GameObject gemPrefab;
+    AudioSource damageSound;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        damageSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,10 +31,26 @@ public class EnemyStats : MonoBehaviour
             GameManager.sharedInstance.enemiesKilled++;
             Destroy(gameObject);
         }
+        if (!enemyWounded)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().material = unwounded;
+        }
     }
 
     public void TakeDamage(float Damage)
     {
+        damageSound.Play();
         health -= Damage;
+        var damageShown = Instantiate(showDamage , transform.position, Quaternion.Euler(Vector3.zero));
+        damageShown.GetComponent<DamageNumber>().damagePoints = Damage;
+        enemyWounded = true;
+        StartCoroutine("ToogleSpriteColor");
+    }
+
+    IEnumerator ToogleSpriteColor ()
+    { 
+        this.gameObject.GetComponent<SpriteRenderer>().material = wounded;
+        yield return new WaitForSeconds(0.25f);
+        enemyWounded = false;
     }
 }

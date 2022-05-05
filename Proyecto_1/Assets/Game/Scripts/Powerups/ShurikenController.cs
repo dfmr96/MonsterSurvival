@@ -22,6 +22,7 @@ public class ShurikenController : MonoBehaviour
 
     void Update()
     {
+        spawner = FindObjectOfType<ShurikensSpawner>();
 
         if (shurikenHealth <= 0)
         {
@@ -34,11 +35,11 @@ public class ShurikenController : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<EnemyStats>().TakeDamage(shurikenDamage);
+            collision.GetComponent<EnemyStats>().TakeDamage(spawner.powerInfo.damage);
             shurikenHealth--;
         }else if (collision.CompareTag("Breakable"))
         {
-            collision.GetComponent<PotBreakable>().TakeDamage(shurikenDamage);
+            collision.GetComponent<PotBreakable>().TakeDamage(spawner.powerInfo.damage);
             shurikenHealth--;
 
         }
