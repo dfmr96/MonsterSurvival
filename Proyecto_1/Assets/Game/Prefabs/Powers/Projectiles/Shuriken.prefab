@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8398466990673575733}
   - component: {fileID: -7663831161917079140}
   - component: {fileID: 2345725013219617645}
+  - component: {fileID: 662531146}
   m_Layer: 6
   m_Name: Shuriken
   m_TagString: Untagged
@@ -115,11 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 686ecae1a99894845bff9348d7933efb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
-  angularSpeed: 5
-  angles: 0
-  damage: 1
   shurikenHealth: 5
+  shurikenDamage: 0
 --- !u!50 &2345725013219617645
 Rigidbody2D:
   serializedVersion: 4
@@ -141,3 +139,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &662531146
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8324569980205961621}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0e3dfe769ee7e054cb9c5881a1280efa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

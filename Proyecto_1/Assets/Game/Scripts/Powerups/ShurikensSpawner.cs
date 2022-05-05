@@ -40,8 +40,8 @@ public class ShurikensSpawner : MonoBehaviour
         for (int i = 0; i < powerInfo.projectiles; i++)
         {
             float angle = i * Mathf.PI * 2 / powerInfo.projectiles;
-            float x = Mathf.Cos(angle + angularSpeed) * powerInfo.radius;
-            float y = Mathf.Sin(angle + angularSpeed) * powerInfo.radius;
+            float x = Mathf.Cos(angle - angularSpeed) * powerInfo.radius;
+            float y = Mathf.Sin(angle - angularSpeed) * powerInfo.radius;
             Vector3 pos = new Vector3(x, y, 0);
 
             shurikenPrefabs[i].transform.position = pos + player.position;
