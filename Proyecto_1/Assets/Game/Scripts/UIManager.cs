@@ -13,6 +13,8 @@ public class UIManager : MonoBehaviour
     public TMP_Text enemiesKilled;
     public TMP_Text timer;
     [SerializeField] PlayerStats playerStatsManager;
+    public bool canRevive = true;
+    [SerializeField] GameObject reviveButtom;
 
 
     void Update()
@@ -33,5 +35,9 @@ public class UIManager : MonoBehaviour
         enemiesKilled.text = GameManager.sharedInstance.enemiesKilled.ToString();
         timer.text = GameManager.sharedInstance.timerMinutes.ToString("00") + ":"+GameManager.sharedInstance.timerSeconds.ToString("00");
 
+
+
     }
+
+
 }

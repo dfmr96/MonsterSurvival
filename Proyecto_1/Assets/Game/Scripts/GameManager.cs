@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public int timerSeconds, timerMinutes;
     public LevelUpScreen levelUpScreenManager;
     public GameOver gameOverScreenManager;
+    public int playerLifes = 1;
 
     private void Awake()
     {
