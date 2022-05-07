@@ -35,8 +35,8 @@ public class EnergyManager : MonoBehaviour
         {
             if (!PlayerPrefs.HasKey("totalEnergy"))
             {
-                PlayerPrefs.SetInt("totalEnergy", 5);  // or what do you want to your need value
-                Load();
+                totalEnergy = 3;  // or what do you want to your need value
+                
                 StartCoroutine(RestoreRoutine());
             }
             else
@@ -107,7 +107,6 @@ public class EnergyManager : MonoBehaviour
                 {
                     isAdding = true;
                     totalEnergy++;
-
                     DateTime timeToAdd = lastAddedTime > counter ? lastAddedTime : counter;
                     counter = AddDuration(timeToAdd, restoreDuration);
                 }
@@ -120,8 +119,8 @@ public class EnergyManager : MonoBehaviour
                 lastAddedTime = DateTime.Now;
                 nextEnergyTime = counter;
             }
-            UpdateEnergy();
             UpdateTimer();
+            UpdateEnergy();
             Save();
             yield return null;
         }
@@ -175,7 +174,7 @@ public class EnergyManager : MonoBehaviour
 
     private void Save()
     {
-        PlayerPrefs.SetInt("totalenergy", totalEnergy);
+        PlayerPrefs.SetInt("totalEnergy", totalEnergy);
         PlayerPrefs.SetString("nextEnergyTime", nextEnergyTime.ToString());
         PlayerPrefs.SetString("lastAddedTime", lastAddedTime.ToString());
     }
