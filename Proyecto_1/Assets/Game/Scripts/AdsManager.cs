@@ -11,7 +11,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener
     private string _gameId;
 
 
-    void Awake()
+    void Start()
     {
         InitializeAds();
     }
@@ -27,6 +27,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener
     public void OnInitializationComplete()
     {
         Debug.Log("Unity Ads initialization complete.");
+        FindObjectOfType<RewardedAdsButton>().LoadAd();
 
     }
 

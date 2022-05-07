@@ -26,6 +26,10 @@ public class ExtraLife : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
         _showAdButton.interactable = false;
         InitializeAds();
     }
+    private void Start()
+    {
+        LoadAd();
+    }
 
     public void InitializeAds()
     {
@@ -53,6 +57,7 @@ public class ExtraLife : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
         // IMPORTANT! Only load content AFTER initialization (in this example, initialization is handled in a different script).
         //     Debug.Log("Loading Ad: " + _adUnitId);
         Advertisement.Load(_adUnitId, this);
+        Debug.Log("Ad Loaded");
     }
 
     // If the ad successfully loads, add a listener to the button and enable it:
