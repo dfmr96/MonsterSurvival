@@ -15,6 +15,9 @@ TagManager:
   - Lightning Ring
   - Boomeran
   - Breakable
+  - Try Again Button
+  - Total Lifes
+  - Life Timer
   layers:
   - Default
   - TransparentFX

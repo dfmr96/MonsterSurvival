@@ -5,22 +5,19 @@ using UnityEngine.Advertisements;
 public class RewardedAdsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
 {
     [SerializeField] Button _showAdButton;
-    [SerializeField] string _androidAdUnitId = "Rewarded_Android";
-    [SerializeField] string _iOSAdUnitId = "Rewarded_iOS";
     string _adUnitId = null; // This will remain null for unsupported platforms
     [SerializeField] GameOver gameover;
-
     void Awake()
     {
         // Get the Ad Unit ID for the current platform:
 #if UNITY_IOS
-        _adUnitId = _iOSAdUnitId;
+        _adUnitId = "Rewarded_iOS";
 #elif UNITY_ANDROID
-        _adUnitId = _androidAdUnitId;
+        _adUnitId = "Rewarded_Android";
 #endif
 
         //Disable the button until the ad is ready to show:
-     //   _showAdButton.interactable = false;
+        _showAdButton.interactable = false;
     }
 
     // Load content to the Ad Unit:
@@ -61,7 +58,7 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAds
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
             // Grant a reward.
-            gameover.Revive();
+                gameover.Revive();
             // Load another ad:
             Advertisement.Load(_adUnitId, this);
         }

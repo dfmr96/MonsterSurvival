@@ -7,8 +7,9 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener
 {
     [SerializeField] string _androidGameId = "4742537";
     [SerializeField] string _iOSGameId = "4742536";
-    [SerializeField] bool _testMode = true;
+    [SerializeField] bool _testMode = false;
     private string _gameId;
+
 
     void Awake()
     {
@@ -26,6 +27,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener
     public void OnInitializationComplete()
     {
         Debug.Log("Unity Ads initialization complete.");
+
     }
 
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)

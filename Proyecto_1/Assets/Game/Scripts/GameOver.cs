@@ -8,6 +8,7 @@ public class GameOver : MonoBehaviour
 {
     public GameObject GameOverScreen;
     [SerializeField] GameObject reviveButtom;
+    [SerializeField] Button tryAgainButton;
     bool canRevive = true;
     PlayerStats player;
 
@@ -25,11 +26,22 @@ public class GameOver : MonoBehaviour
         {
             reviveButtom.SetActive(false);
         }
+
+        if (EnergyManager.sharedInstance.totalEnergy == 0)
+        {
+            tryAgainButton.interactable = false;
+
+        }
     }
     public void TryAgain()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("Game");
+        if (EnergyManager.sharedInstance.totalEnergy > 0)
+        {
+            EnergyManager.sharedInstance.totalEnergy--;
+            Time.timeScale = 1;
+            SceneManager.LoadScene("Game");
+
+        }
     }
 
     public void ShowGameOverScreen()
