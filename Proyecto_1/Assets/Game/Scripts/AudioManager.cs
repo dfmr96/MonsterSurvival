@@ -1,11 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
+    [SerializeField] AudioMixer audioMixer;
+    [SerializeField] SettingMenu audioSetting;
     public static AudioManager sharedInstance;
     public AudioSource confirmSound, gemPick;
+    public const string MUSIC_KEY = "musicVolume", SFX_KEY = "sfxVolume";
 
     private void Awake()
     {
@@ -13,6 +15,11 @@ public class AudioManager : MonoBehaviour
         {
             sharedInstance = this;
         }
+        else
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(this);
     }
 
     public void ChoosePowerSound()
@@ -24,4 +31,13 @@ public class AudioManager : MonoBehaviour
     {
         gemPick.Play();
     }
+    void LoadVolume()
+    {
+        float musicVolume = PlayerPrefs.GetFloat(MUSIC_KEY);
+        float sfxVolume = PlayerPrefs.GetFloat(SFX_KEY);
+
+        audioMixer.SetFloat(SettingMenu.MIXER_MUSIC, musicVolume);
+        audioMixer.SetFloat(SettingMenu.MIXER_SFX, sfxVolume);
+    }
+
 }

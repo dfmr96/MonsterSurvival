@@ -769,7 +769,7 @@ PlayerSettings:
   webGLWasmArithmeticExceptions: 0
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
-  webGLDecompressionFallback: 0
+  webGLDecompressionFallback: 1
   scriptingDefineSymbols: {}
   additionalCompilerArguments: {}
   platformArchitecture: {}
@@ -849,7 +849,7 @@ PlayerSettings:
     Build: 0
     Collab: 0
     Game Performance: 0
-    Legacy Analytics: 0
+    Legacy Analytics: 1
     Purchasing: 0
     UDP: 0
     Unity Ads: 1
@@ -869,7 +869,7 @@ PlayerSettings:
   cloudProjectId: 574141c2-3bda-4819-8bb3-f9f63009c0f9
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Monster Survival (1)
+  projectName: Monster Survival
   organizationId: dfmr96
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

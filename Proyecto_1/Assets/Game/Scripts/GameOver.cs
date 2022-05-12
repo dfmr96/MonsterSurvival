@@ -40,7 +40,6 @@ public class GameOver : MonoBehaviour
             EnergyManager.sharedInstance.totalEnergy--;
             Time.timeScale = 1;
             SceneManager.LoadScene("Game");
-
         }
     }
 
