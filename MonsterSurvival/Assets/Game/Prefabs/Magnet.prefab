@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2960667565108002448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5159848037390431243}
+  - component: {fileID: 2995132201248198530}
+  - component: {fileID: 2490295742678311422}
+  m_Layer: 0
+  m_Name: Magnet
+  m_TagString: Magnet
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5159848037390431243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2960667565108002448}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2995132201248198530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2960667565108002448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af0c8f527122e44f8f25bd219fb1c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemTakerArea: {fileID: 0}
+  powerInfo: {fileID: 0}
+--- !u!114 &2490295742678311422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2960667565108002448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33addd74678a1b49b7003b18bd5bae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerName: Magnet
+  powerDescription: Increase the radius inside which gems can be taken
+  powerIcon: {fileID: 2140140862, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
+  currentLevel: 1
+  maxLevel: 0
+  leveledUp: 0
+  health: 0
+  defense: 0
+  damage: 0
+  angularSpeed: 0
+  speed: 0
+  coolDown: 0
+  radius: 0
+  multiplier: 1
+  projectiles: 0

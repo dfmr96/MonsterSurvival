@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5810927628026433492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5810927628026433494}
+  - component: {fileID: 5810927628026433495}
+  - component: {fileID: 5810927628026433489}
+  m_Layer: 0
+  m_Name: BoomeranSpawner
+  m_TagString: Boomeran
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5810927628026433494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5810927628026433492}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5810927628026433495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5810927628026433492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33addd74678a1b49b7003b18bd5bae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerName: Boomeran
+  powerDescription: Throw a boomeran that ricochet with enemies
+  powerIcon: {fileID: 1555366295, guid: 792fb709a142fb948b8de7a24b534f1a, type: 3}
+  currentLevel: 1
+  maxLevel: 0
+  leveledUp: 0
+  health: 2
+  defense: 0
+  damage: 3
+  angularSpeed: 0
+  speed: 7
+  coolDown: 0.5
+  radius: 0
+  projectiles: 0
+--- !u!114 &5810927628026433489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5810927628026433492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ac69551d4ec274aade6034c287c108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerInfo: {fileID: 5810927628026433495}
+  boomeranPrefab: {fileID: 4335379817415681821, guid: 5ef1caac66b0d6c43b01de050a3592d3, type: 3}
+  coolDownCounter: 0
