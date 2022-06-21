@@ -70,7 +70,7 @@ MonoBehaviour:
   powerDescription: Deal damage to nearest enemy
   powerIcon: {fileID: -620052089, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
   currentLevel: 1
-  maxLevel: 0
+  maxLevel: 7
   leveledUp: 0
   health: 0
   defense: 0
@@ -79,6 +79,7 @@ MonoBehaviour:
   speed: 0
   coolDown: 3
   radius: 10
+  multiplier: 0
   projectiles: 0
 --- !u!58 &7644391527852492096
 CircleCollider2D:

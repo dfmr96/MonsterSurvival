@@ -30,7 +30,7 @@ public class Magnet : MonoBehaviour
         {
             case 1:
                 Debug.Log(powerInfo.name + "Nivel 1");
-                powerInfo.powerDescription = "Increase area by 20%";
+                powerInfo.powerDescription = "Increase area by 10%";
                 powerInfo.multiplier = 1.5f;
                 gemTakerArea.radius = 1.5f;
                 break;
@@ -38,33 +38,46 @@ public class Magnet : MonoBehaviour
 
             case 2:
                 Debug.Log(powerInfo.name + "Subido a nivel 2");
-                powerInfo.powerDescription = "Increase area by 25%";
-                powerInfo.multiplier *= 1.2f;
-                gemTakerArea.radius *= 1.2f;
+                powerInfo.powerDescription = "Increase area by 15%";
+                powerInfo.multiplier *= 1.1f;
+                gemTakerArea.radius *= 1.1f;
 
                 break;
 
             case 3:
                 Debug.Log(powerInfo.name + "Subido a nivel 3");
-                powerInfo.powerDescription = "Increase area by 40%";
-                powerInfo.multiplier *= 1.25f;
-                gemTakerArea.radius *= 1.25f;
+                powerInfo.powerDescription = "Increase area by 30%";
+                powerInfo.multiplier *= 1.15f;
+                gemTakerArea.radius *= 1.15f;
 
                 break;
 
             case 4:
                 Debug.Log(powerInfo.name + "Subido a nivel 4");
-                powerInfo.powerDescription = "Increase area by 65%";
-                powerInfo.multiplier *= 1.4f;
-                gemTakerArea.radius *= 1.4f;
+                powerInfo.powerDescription = "Increase area by 50%";
+                powerInfo.multiplier *= 1.3f;
+                gemTakerArea.radius *= 1.3f;
 
                 break;
 
             case 5:
                 Debug.Log(powerInfo.name + "Subido a nivel 5");
+                powerInfo.powerDescription = "Increase area by 65%";
+                powerInfo.multiplier *= 1.5f;
+                gemTakerArea.radius *= 1.5f;
+                break;
+
+            case 6:
+                Debug.Log(powerInfo.name + "Subido a nivel 6");
+                powerInfo.powerDescription = "Increase area by 75%";
                 powerInfo.multiplier *= 1.65f;
                 gemTakerArea.radius *= 1.65f;
+                break;
 
+            case 7:
+                Debug.Log(powerInfo.name + "Subido a nivel 7");
+                powerInfo.multiplier *= 1.75f;
+                gemTakerArea.radius *= 1.75f;
                 break;
 
 

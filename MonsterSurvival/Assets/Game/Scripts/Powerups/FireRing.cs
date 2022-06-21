@@ -29,6 +29,12 @@ public class FireRing : MonoBehaviour
             coolDownCounter = 0;
         }
         animator.SetBool("isAttacking", false);
+
+        if (powerInfo.leveledUp)
+        {
+            UpdateStats();
+            powerInfo.leveledUp = false;
+        }
     }
 
     public void DamageEnemies()
@@ -51,5 +57,50 @@ public class FireRing : MonoBehaviour
 
     }
 
+    public void UpdateStats()
+    {
+        switch (powerInfo.currentLevel)
+        {
+            case 1:
+                Debug.Log(powerInfo.name + "Nivel 1");
+                powerInfo.powerDescription = "Increase damage by 5";
+                break;
 
+
+            case 2:
+                Debug.Log(powerInfo.name + "Subido a nivel 2");
+                powerInfo.powerDescription = "Decrease cooldown by 25%";
+                powerInfo.damage += 5;
+                break;
+
+            case 3:
+                Debug.Log(powerInfo.name + "Subido a nivel 3");
+                powerInfo.powerDescription = "Increase damage by 5";
+                powerInfo.coolDown *= 0.75f;
+                break;
+
+            case 4:
+                Debug.Log(powerInfo.name + "Subido a nivel 4");
+                powerInfo.powerDescription = "Decrease cooldown by 50%";
+                powerInfo.damage += 5;
+                break;
+
+            case 5:
+                powerInfo.powerDescription = "Increase damage by 5";
+                powerInfo.coolDown *= 0.5f;
+                break;
+
+            case 6:
+                powerInfo.powerDescription = "Increase damage by 5";
+                powerInfo.damage += 5;
+                break;
+
+            case 7:
+                powerInfo.damage += 5;
+                break;
+
+        }
+
+
+    }
 }

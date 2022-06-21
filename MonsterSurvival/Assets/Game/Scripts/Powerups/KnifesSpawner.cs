@@ -66,10 +66,19 @@ public class KnifesSpawner : MonoBehaviour
 
             case 5:
                 Debug.Log(powerInfo.name + "Subido a nivel 5");
+                powerInfo.powerDescription = "Increase damage by 1";
                 powerInfo.coolDown *= 0.75f;
                 break;
+            case 6:
+                Debug.Log(powerInfo.name + "Subido a nivel 6");
+                powerInfo.powerDescription = "Increase damage by 1";
+                powerInfo.damage++;
+                break;
 
-
+            case 7:
+                Debug.Log(powerInfo.name + "Subido a nivel 7");
+                powerInfo.damage++;
+                break;
         }
     }
 }

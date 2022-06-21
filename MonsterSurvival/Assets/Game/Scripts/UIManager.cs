@@ -38,7 +38,7 @@ public class UIManager : MonoBehaviour
         //Texto
         StringBuilder sb = new StringBuilder("");
 
-        playerExpText.text = deltaExp + "/" + deltaMaxExp;
+        playerExpText.text = ((uint)deltaExp) + "/" + ((uint)deltaMaxExp);
         currentLevel.text = "Level:" + playerStatsManager.currentLevel;
         enemiesKilled.text = GameManager.sharedInstance.enemiesKilled.ToString();
         timer.text = GameManager.sharedInstance.timerMinutes.ToString("00") + ":" + GameManager.sharedInstance.timerSeconds.ToString("00");

@@ -70,7 +70,7 @@ MonoBehaviour:
   powerDescription: Summon a fireball in direction no nearest enemy
   powerIcon: {fileID: -829904868, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
   currentLevel: 1
-  maxLevel: 5
+  maxLevel: 7
   leveledUp: 0
   health: 0
   defense: 0

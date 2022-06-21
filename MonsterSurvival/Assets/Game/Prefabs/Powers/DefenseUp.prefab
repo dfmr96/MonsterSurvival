@@ -49,11 +49,11 @@ MonoBehaviour:
   - 0
   - 1
   - 2
-  - 3
   - 4
-  - 5
   - 6
   - 7
+  - 8
+  - 9
   powerInfo: {fileID: 5635751287452914550}
 --- !u!114 &5635751287452914550
 MonoBehaviour:
@@ -71,7 +71,7 @@ MonoBehaviour:
   powerDescription: Increase defense stat
   powerIcon: {fileID: 1570002788, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
   currentLevel: 1
-  maxLevel: 5
+  maxLevel: 7
   leveledUp: 0
   health: 0
   defense: 1
@@ -80,4 +80,5 @@ MonoBehaviour:
   speed: 0
   coolDown: 0
   radius: 0
+  multiplier: 0
   projectiles: 0

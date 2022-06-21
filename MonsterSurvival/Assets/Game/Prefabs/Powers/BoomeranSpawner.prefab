@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5810927628026433494}
-  - component: {fileID: 5810927628026433495}
   - component: {fileID: 5810927628026433489}
+  - component: {fileID: 5810927628026433495}
   m_Layer: 0
   m_Name: BoomeranSpawner
   m_TagString: Boomeran
@@ -33,6 +33,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5810927628026433489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5810927628026433492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ac69551d4ec274aade6034c287c108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerInfo: {fileID: 5810927628026433495}
+  boomeranPrefab: {fileID: 4335379817415681821, guid: 5ef1caac66b0d6c43b01de050a3592d3, type: 3}
+  coolDownCounter: 0
 --- !u!114 &5810927628026433495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,28 +64,14 @@ MonoBehaviour:
   powerDescription: Throw a boomeran that ricochet with enemies
   powerIcon: {fileID: 1555366295, guid: 792fb709a142fb948b8de7a24b534f1a, type: 3}
   currentLevel: 1
-  maxLevel: 0
+  maxLevel: 7
   leveledUp: 0
   health: 2
   defense: 0
-  damage: 3
+  damage: 5
   angularSpeed: 0
   speed: 7
   coolDown: 0.5
   radius: 0
+  multiplier: 0
   projectiles: 0
---- !u!114 &5810927628026433489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5810927628026433492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ac69551d4ec274aade6034c287c108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerInfo: {fileID: 5810927628026433495}
-  boomeranPrefab: {fileID: 4335379817415681821, guid: 5ef1caac66b0d6c43b01de050a3592d3, type: 3}
-  coolDownCounter: 0

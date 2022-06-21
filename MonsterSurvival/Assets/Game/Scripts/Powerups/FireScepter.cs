@@ -76,7 +76,7 @@ public class FireScepter : MonoBehaviour
         {
             case 1:
                 Debug.Log(powerInfo.name + "Nivel 1");
-                powerInfo.powerDescription = "Increase radius by 50%";
+                powerInfo.powerDescription = "Increase damage by 5";
 
                 break;
 
@@ -84,7 +84,7 @@ public class FireScepter : MonoBehaviour
             case 2:
                 Debug.Log(powerInfo.name + "Subido a nivel 2");
                 powerInfo.powerDescription = "Decrease cooldown by 25%";
-                powerInfo.radius *= 1.5f;
+                powerInfo.damage += 5;
                 break;
 
             case 3:
@@ -104,6 +104,15 @@ public class FireScepter : MonoBehaviour
                 powerInfo.coolDown *= 0.5f;
                 break;
 
+            case 6:
+                powerInfo.powerDescription = "Increase damage by 5";
+                powerInfo.damage += 5;
+                break;
+            
+            case 7:
+                powerInfo.powerDescription = "Increase damage by 5";
+                powerInfo.damage += 5;
+                break;
 
         }
     }

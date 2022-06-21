@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-    public float health = 2f;
-    public float speed = 3f;
-    public float attackSpeed = 1f, attackDelay = 2f;
+    public float health = 2.00f;
     public float attackDamage = 1f;
+    public float speed = 3f;
+    public float attackDelay = 2f;
     public GameObject showDamage;
     bool enemyWounded = false;
     public Material unwounded, wounded; 

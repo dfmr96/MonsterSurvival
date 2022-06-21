@@ -96,6 +96,15 @@ public class BarbarianAxe : MonoBehaviour
                 powerInfo.coolDown *= 0.75f;
                 break;
 
+            case 6:
+                Debug.Log(powerInfo.name + "Subido a nivel 6");
+                powerInfo.damage += 2;
+                break;
+            case 7:
+                Debug.Log(powerInfo.name + "Subido a nivel 7");
+                powerInfo.damage += 2;
+                break;
+
 
         }
     }

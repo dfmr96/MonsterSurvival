@@ -124,11 +124,11 @@ MonoBehaviour:
   powerDescription: Create deal damage to surrounding enemies
   powerIcon: {fileID: -1829230799, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
   currentLevel: 1
-  maxLevel: 0
+  maxLevel: 7
   leveledUp: 0
   health: 0
   defense: 0
-  damage: 2
+  damage: 5
   angularSpeed: 0
   speed: 0
   coolDown: 2
@@ -145,7 +145,7 @@ Animator:
   m_GameObject: {fileID: 1621467079224398597}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 84595d0d39a84fd409e7ec590df9c021, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4d9ca00dcefdaef43ad762266c1a0a17, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

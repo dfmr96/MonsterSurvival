@@ -57,6 +57,15 @@ public class HealthUp : MonoBehaviour
                 playerStats.maxHealth *= 1.25f;
                 break;
 
+            case 6:
+                Debug.Log(powerInfo.name + "Increase max health by 40%");
+                playerStats.maxHealth *= 1.4f;
+                break;
+            case 7:
+                Debug.Log(powerInfo.name + "Increase max health by 50%");
+                playerStats.maxHealth *= 1.5f;
+                break;
+
 
         }
     }

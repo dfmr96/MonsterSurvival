@@ -44,10 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f104312597f03214e81a99648a3fb85c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyToSpawn:
+  - {fileID: 1662630152830727612, guid: a048d8112035d2d44b7c97803f8776ad, type: 3}
   enemyPrefab:
   - {fileID: 1662630152830727612, guid: a048d8112035d2d44b7c97803f8776ad, type: 3}
   - {fileID: 1662630152830727612, guid: 789084cf5533c2042b5f4565dd4dee7f, type: 3}
-  enemySpawnDelay: 0.25
+  - {fileID: 7555006842626249327, guid: 7387153bdbb90404193d3b8667854b06, type: 3}
+  - {fileID: 401930304025764447, guid: dd709ed88f8b4d2489bbe4cb341d449d, type: 3}
+  - {fileID: 463735652606366251, guid: 4bcf873a1a506c24a85645c264456baa, type: 3}
+  - {fileID: 2335152713740009633, guid: fd8cddecf32993041b12c2200e193061, type: 3}
+  - {fileID: 4586786143668228554, guid: 6248c4cc2dd96104faac767453d81217, type: 3}
+  - {fileID: 7077308512733679963, guid: 21d1a1a280778004eaf45f90e7b3c1c6, type: 3}
+  enemySpawnDelay: 1.5
   maxSpawnRadius: 20
   minSpawnRadius: 17
   player: {fileID: 0}

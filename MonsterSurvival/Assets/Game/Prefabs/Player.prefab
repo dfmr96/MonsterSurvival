@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -228680447, guid: 69767294855ad084e9d0f4e358da90a6, type: 3}
+  m_Sprite: {fileID: -2055984651, guid: f32c0fee242e2a24bad4d01a3943d79a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,8 +124,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.22270945, y: -0.4192176}
-  m_Size: {x: 0.60698336, y: 1.1615648}
+  m_Offset: {x: -0.00056898594, y: -0.1141423}
+  m_Size: {x: 0.7743256, y: 1.743707}
   m_Direction: 0
 --- !u!114 &5168636392164987703
 MonoBehaviour:
@@ -139,11 +139,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72c53265d0e8e5e47a3e2f28ba9a6735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {x: 0, y: 0, z: 0}
-  fingerDirection: {x: 0, y: 0, z: 0}
-  speed: 2
+  speed: 2.5
   cam: {fileID: 0}
   sprite: {fileID: 0}
+  direction: {x: 0, y: 0}
+  lastDirection: {x: 0, y: 0}
+  joystick: {fileID: 0}
+  joystickGO: {fileID: 0}
 --- !u!114 &1123149959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +162,108 @@ MonoBehaviour:
   health: 100
   currentLevel: 0
   currentExp: 0
-  expToLevelUp: 00000000140000002800000050000000a0000000400100008002000000050000000a0000b80b0000e40c0000ac0d0000740e0000d80e00003c0f0000a00f00000410000068100000
+  expToLevelUp:
+  - 0
+  - 15
+  - 43
+  - 78
+  - 118
+  - 163
+  - 224
+  - 290
+  - 361
+  - 436
+  - 546
+  - 662
+  - 784
+  - 910
+  - 1041
+  - 1176
+  - 1336
+  - 1501
+  - 1671
+  - 1845
+  - 2024
+  - 2253
+  - 2488
+  - 2728
+  - 2973
+  - 3223
+  - 3427
+  - 3635
+  - 3846
+  - 4062
+  - 4281
+  - 4643
+  - 5010
+  - 5384
+  - 5763
+  - 6029
+  - 6299
+  - 6573
+  - 6850
+  - 7131
+  - 7637
+  - 8149
+  - 8668
+  - 9192
+  - 9723
+  - 10058
+  - 10398
+  - 10740
+  - 11087
+  - 11437
+  - 12073
+  - 12716
+  - 13365
+  - 14020
+  - 14681
+  - 15423
+  - 16171
+  - 16926
+  - 17688
+  - 18456
+  - 19231
+  - 19934
+  - 20642
+  - 21357
+  - 22077
+  - 23044
+  - 24019
+  - 25001
+  - 25991
+  - 26987
+  - 27782
+  - 28583
+  - 29389
+  - 30201
+  - 31018
+  - 32187
+  - 33364
+  - 34548
+  - 35741
+  - 36941
+  - 37835
+  - 38735
+  - 39641
+  - 40552
+  - 41468
+  - 42851
+  - 44242
+  - 45641
+  - 47048
+  - 48463
+  - 49460
+  - 50461
+  - 51468
+  - 52481
+  - 53499
+  - 55107
+  - 56724
+  - 58349
+  - 59982
+  - 61624
+  - 63624
   showDamage: {fileID: 5256549769481028063, guid: 616ce6c2765962c46979482457e5f87b, type: 3}
 --- !u!95 &1480570913
 Animator:
@@ -189,6 +292,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5168636392164987702}
     m_Modifications:
+    - target: {fileID: 737087356404896017, guid: d689f5b45b0e9594d8f777af8d548635, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 737087356404896022, guid: d689f5b45b0e9594d8f777af8d548635, type: 3}
       propertyPath: m_RootOrder
       value: 0

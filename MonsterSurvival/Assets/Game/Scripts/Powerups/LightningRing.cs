@@ -100,6 +100,15 @@ public class LightningRing : MonoBehaviour
                 powerInfo.coolDown *= 0.5f;
                 break;
 
+            case 6:
+                powerInfo.powerDescription = "Increase damage by 5";
+                powerInfo.damage += 5;
+                break;
+
+            case 7:
+                powerInfo.damage += 5;
+                break;
+
 
         }
     }

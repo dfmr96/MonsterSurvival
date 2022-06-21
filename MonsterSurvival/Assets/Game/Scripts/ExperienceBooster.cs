@@ -24,33 +24,43 @@ public class ExperienceBooster : MonoBehaviour
         {
             case 1:
                 Debug.Log(powerInfo.name + "Nivel 1");
-                powerInfo.powerDescription = "Increase experience gained by 10%";
-                powerInfo.multiplier = 1.1f;
-
+                powerInfo.powerDescription = "Increase experience gained by 6%";
                 break;
 
 
             case 2:
                 Debug.Log(powerInfo.name + "Subido a nivel 2");
-                powerInfo.powerDescription = "Increase experience gained by 20%";
-                powerInfo.multiplier = 1.2f;
+                powerInfo.powerDescription = "Increase experience gained by 9%";
+                powerInfo.multiplier = 1.06f;
                 break;
 
             case 3:
                 Debug.Log(powerInfo.name + "Subido a nivel 3");
-                powerInfo.powerDescription = "Increase experience gained by 35%";
-                powerInfo.multiplier = 1.4f;
+                powerInfo.powerDescription = "Increase experience gained by 15%";
+                powerInfo.multiplier = 1.09f;
                 break;
 
             case 4:
                 Debug.Log(powerInfo.name + "Subido a nivel 4");
-                powerInfo.powerDescription = "Increase experience gained by 50%";
-                powerInfo.multiplier = 1.75f;
+                powerInfo.powerDescription = "Increase experience gained by 25%";
+                powerInfo.multiplier = 1.15f;
                 break;
 
             case 5:
                 Debug.Log(powerInfo.name + "Subido a nivel 5");
-                powerInfo.multiplier = 2.25f;
+                powerInfo.powerDescription = "Increase experience gained by 35%";
+                powerInfo.multiplier = 1.25f;
+                break;
+
+            case 6:
+                Debug.Log(powerInfo.name + "Subido a nivel 6");
+                powerInfo.powerDescription = "Increase experience gained by 50%";
+                powerInfo.multiplier = 1.35f;
+                break;
+
+            case 7:
+                Debug.Log(powerInfo.name + "Subido a nivel 7");
+                powerInfo.multiplier = 1.5f;
                 break;
 
 

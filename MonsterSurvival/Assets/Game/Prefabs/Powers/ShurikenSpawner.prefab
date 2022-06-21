@@ -66,13 +66,14 @@ MonoBehaviour:
   powerDescription: Summon an amount of shuriken that spin around
   powerIcon: {fileID: -1852582129, guid: 792fb709a142fb948b8de7a24b534f1a, type: 3}
   currentLevel: 1
-  maxLevel: 5
+  maxLevel: 7
   leveledUp: 0
-  health: 5
+  health: 10
   defense: 0
-  damage: 1
+  damage: 5
   angularSpeed: 2
   speed: 0
   coolDown: 5
   radius: 3
+  multiplier: 0
   projectiles: 5

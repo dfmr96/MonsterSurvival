@@ -64,13 +64,14 @@ MonoBehaviour:
   powerDescription: Throw a knife at the last direction
   powerIcon: {fileID: -296711005, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
   currentLevel: 1
-  maxLevel: 5
+  maxLevel: 7
   leveledUp: 0
   health: 1
   defense: 0
-  damage: 3
+  damage: 5
   angularSpeed: 0
   speed: 15
   coolDown: 0.5
   radius: 0
+  multiplier: 0
   projectiles: 0

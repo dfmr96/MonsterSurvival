@@ -42,20 +42,20 @@ public class BoomeranSpawner : MonoBehaviour
         {
             case 1:
                 Debug.Log(powerInfo.name + "Nivel 1");
-                powerInfo.powerDescription = "Increase damage by 1";  
+                powerInfo.powerDescription = "Increase damage by 2";  
                 break;
 
 
             case 2:
                 Debug.Log(powerInfo.name + "Subido a nivel 2");
                 powerInfo.powerDescription = "Increase ricochets by 1";
-                powerInfo.damage++;
+                powerInfo.damage += 2;
                 break;
 
             case 3:
                 Debug.Log(powerInfo.name + "Subido a nivel 3");
-                powerInfo.powerDescription = "Increase speed by 1";
-                powerInfo.health++;
+                powerInfo.powerDescription = "Increase speed by 3";
+                powerInfo.health += 3;
                 break;
 
             case 4:
@@ -66,8 +66,21 @@ public class BoomeranSpawner : MonoBehaviour
 
             case 5:
                 Debug.Log(powerInfo.name + "Subido a nivel 5");
+                powerInfo.powerDescription = "Increase damage by 2";
                 powerInfo.coolDown *= 0.75f;
                 break;
+
+            case 6:
+                Debug.Log(powerInfo.name + "Subido a nivel 6");
+                powerInfo.powerDescription = "Increase damage by 2";
+                powerInfo.damage += 2;
+                break;
+            case 7:
+                Debug.Log(powerInfo.name + "Subido a nivel 6");
+                powerInfo.powerDescription = "Increase damage by 3";
+                powerInfo.damage += 3;
+                break;
+
 
 
         }

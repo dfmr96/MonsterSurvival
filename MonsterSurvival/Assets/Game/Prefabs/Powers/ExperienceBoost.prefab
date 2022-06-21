@@ -62,7 +62,7 @@ MonoBehaviour:
   powerDescription: Boost base experience gained
   powerIcon: {fileID: 939876442, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
   currentLevel: 1
-  maxLevel: 0
+  maxLevel: 7
   leveledUp: 0
   health: 0
   defense: 0
@@ -71,5 +71,5 @@ MonoBehaviour:
   speed: 0
   coolDown: 0
   radius: 0
-  multiplier: 1.1
+  multiplier: 1.03
   projectiles: 0
