@@ -24,6 +24,7 @@ TagManager:
   - Fire Scepter
   - Thornmail
   - BannerAds-LevelUp
+  - Super Enemy
   layers:
   - Default
   - TransparentFX

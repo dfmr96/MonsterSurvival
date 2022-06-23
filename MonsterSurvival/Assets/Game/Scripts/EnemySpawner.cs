@@ -88,6 +88,7 @@ public class EnemySpawner : MonoBehaviour
                 Debug.Log(enemyPrefab[0].name + " borrado de ToSpawn");
                 enemyToSpawn.Add(enemyPrefab[2]);
                 Debug.Log(enemyPrefab[2].name + " copiado a ToSpawn");
+                SuperEnemySpawner(superEnemiesPrefabs[0]);
                 wave2Trigger = true;
             }
         }
@@ -107,6 +108,7 @@ public class EnemySpawner : MonoBehaviour
                 enemyToSpawn.Add(enemyPrefab[3]);
                 Debug.Log(enemyPrefab[3].name + "copiado a ToSpawn");
                 enemySpawnDelay = 0.9f;
+                SuperEnemySpawner(superEnemiesPrefabs[0]);
                 wave3Trigger = true;
             }
         }
@@ -126,6 +128,7 @@ public class EnemySpawner : MonoBehaviour
                 enemyToSpawn.Add(enemyPrefab[4]);
                 Debug.Log(enemyPrefab[4].name + " copiado a ToSpawn");
                 enemySpawnDelay = 0.85f;
+                SuperEnemySpawner(superEnemiesPrefabs[0]);
                 wave4Trigger = true;
             }
         }
@@ -145,6 +148,8 @@ public class EnemySpawner : MonoBehaviour
                 Debug.Log(enemyPrefab[2].name + " borrado de ToSpawn");
                 Debug.Log(enemyPrefab[3].name + " borrado de ToSpawn");
                 enemySpawnDelay = 0.8f;
+                SuperEnemySpawner(superEnemiesPrefabs[0]);
+
                 wave5Trigger = true;
             }
         }
@@ -166,6 +171,7 @@ public class EnemySpawner : MonoBehaviour
                 enemyToSpawn.Add(enemyPrefab[5]);
                 Debug.Log(enemyPrefab[5].name + " copiado a ToSpawn");
                 enemySpawnDelay = 0.75f;
+                SuperEnemySpawner(superEnemiesPrefabs[0]);
                 wave6Trigger = true;
             }
         }
@@ -187,6 +193,7 @@ public class EnemySpawner : MonoBehaviour
                 enemyToSpawn.Add(enemyPrefab[7]);
                 Debug.Log(enemyPrefab[7].name + " copiado a ToSpawn");
                 enemySpawnDelay = 0.7f;
+                SuperEnemySpawner(superEnemiesPrefabs[0]);
                 wave7Trigger = true;
             }
         }
@@ -204,6 +211,7 @@ public class EnemySpawner : MonoBehaviour
                 enemyToSpawn.Remove(enemyPrefab[5]);
                 Debug.Log(enemyPrefab[5].name + " borrado de ToSpawn");
                 enemySpawnDelay = 0.65f;
+                SuperEnemySpawner(superEnemiesPrefabs[0]);
                 wave8Trigger = true;
             }
         }
@@ -221,6 +229,7 @@ public class EnemySpawner : MonoBehaviour
                 enemyToSpawn.Remove(enemyPrefab[6]);
                 Debug.Log(enemyPrefab[6].name + " borrado de ToSpawn");
                 wave9Trigger = true;
+                SuperEnemySpawner(superEnemiesPrefabs[0]);
                 enemySpawnDelay = 0.4f;
             }
         }
@@ -239,7 +248,7 @@ public class EnemySpawner : MonoBehaviour
                 Debug.Log(enemyPrefab[7].name + " borrado de ToSpawn");
                 enemyToSpawn.Add(enemyPrefab[0]);
                 Debug.Log(enemyPrefab[0].name + " copiado a ToSpawn");
-
+                SuperEnemySpawner(superEnemiesPrefabs[0]);
                 enemySpawnDelay = 0.3f;
                 wave10Trigger = true;
             }

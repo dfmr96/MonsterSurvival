@@ -13,6 +13,7 @@ public class EnemyStats : MonoBehaviour
     public Material unwounded, wounded; 
     [SerializeField] GameObject gemPrefab;
     AudioSource damageSound;
+    PlayerStats playerStats;
 
 
 
@@ -20,6 +21,7 @@ public class EnemyStats : MonoBehaviour
     void Start()
     {
         damageSound = GetComponent<AudioSource>();
+        playerStats = FindObjectOfType<PlayerStats>();
     }
 
     // Update is called once per frame
@@ -29,6 +31,11 @@ public class EnemyStats : MonoBehaviour
         {
             Instantiate(gemPrefab, gameObject.transform.position, Quaternion.identity);
             GameManager.sharedInstance.enemiesKilled++;
+
+            if (this.gameObject.GetComponent<SuperEnemy>() != null)
+            {
+                playerStats.currentExp = playerStats.expToLevelUp[playerStats.currentLevel];
+            }
             Destroy(gameObject);
         }
         if (!enemyWounded)
