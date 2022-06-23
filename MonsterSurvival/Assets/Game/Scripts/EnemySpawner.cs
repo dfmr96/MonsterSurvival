@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] List<GameObject> enemyToSpawn;
     [SerializeField] List<GameObject> enemyPrefab;
+    [SerializeField] List<GameObject> superEnemiesPrefabs;
     [SerializeField] float enemySpawnDelay;
     [SerializeField] float maxSpawnRadius;
     [SerializeField] float minSpawnRadius;
@@ -67,6 +68,7 @@ public class EnemySpawner : MonoBehaviour
                 maxEnemiesSpawning++;
                 enemyToSpawn.Add(enemyPrefab[1]);
                 Debug.Log(enemyPrefab[1].name + "copiado a ToSpawn");
+                SuperEnemySpawner(superEnemiesPrefabs[0]);
                 wave1Trigger = true;
             }
         }
@@ -257,6 +259,12 @@ public class EnemySpawner : MonoBehaviour
             }
             yield return new WaitForSeconds(enemySpawnDelay);
         }
+    }
+
+    void SuperEnemySpawner(GameObject superEnemy)
+    {
+        Vector2 randomPosition = (Vector2)player.transform.position + Random.insideUnitCircle.normalized * Random.Range(minSpawnRadius, maxSpawnRadius);
+        Instantiate(superEnemy, randomPosition, Quaternion.identity);
     }
     private void OnDrawGizmos()
     {

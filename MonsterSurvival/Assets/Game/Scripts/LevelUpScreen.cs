@@ -16,12 +16,15 @@ public class LevelUpScreen : MonoBehaviour
     PowerInfo power1Info, power2Info, power3Info;
     [SerializeField] GameObject bannerAdsPrefab;
     [SerializeField] GameObject bannerAds;
+    [SerializeField] GameObject adMobBannerPrefab;
+    [SerializeField] GameObject adMobBanner;
 
 
     public void ShowLevelUpScreen()
     {
         levelUpScreen.SetActive(true);
         Instantiate(bannerAdsPrefab);
+        Instantiate(adMobBannerPrefab);
         Time.timeScale = 0;
         ShowPower1();
         ShowPower2();
@@ -34,7 +37,9 @@ public class LevelUpScreen : MonoBehaviour
     {
         levelUpScreen.SetActive(false);
         bannerAds = FindObjectOfType<bannerAds>().gameObject;
+        adMobBanner = FindObjectOfType<AdMobBanner>().gameObject;
         Destroy(bannerAds);
+        adMobBanner.GetComponent<AdMobBanner>().DestroyAd();
         Time.timeScale = 1;
     }
 

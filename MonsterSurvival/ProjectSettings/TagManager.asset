@@ -33,8 +33,8 @@ TagManager:
   - UI
   - Powers
   - Breakable
-  - 
-  - 
+  - Lights
+  - Background
   - 
   - 
   - 
@@ -58,6 +58,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 719981613
+    locked: 0
   - name: Enemy
     uniqueID: 460692619
     locked: 0

@@ -58,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
   speed: 1
   attackDelay: 1
   showDamage: {fileID: 5256549769481028063, guid: 616ce6c2765962c46979482457e5f87b, type: 3}
-  unwounded: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  unwounded: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   wounded: {fileID: 2100000, guid: 2356e016390f4064fb721b2a785b9408, type: 2}
   gemPrefab: {fileID: 5897675193580475937, guid: 5bcdb7dfb9c15bf44850c061ee348663, type: 3}
 --- !u!61 &8364713555228009753

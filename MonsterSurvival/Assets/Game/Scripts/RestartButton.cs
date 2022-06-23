@@ -12,8 +12,8 @@ public class RestartButton : MonoBehaviour
     if (EnergyManager.sharedInstance.totalEnergy > 0)
         {
             EnergyManager.sharedInstance.totalEnergy--;
-            Time.timeScale = 1;
             SceneManager.LoadScene("Game");
+            Time.timeScale = 1;
         }
     }
 }
