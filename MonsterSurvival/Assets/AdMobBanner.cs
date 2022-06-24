@@ -1,8 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using GoogleMobileAds.Api;
+using System;
+using UnityEngine;
+using GoogleMobileAds;
+
 
 
 public class AdMobBanner : MonoBehaviour
@@ -24,13 +24,13 @@ public class AdMobBanner : MonoBehaviour
 #if UNITY_ANDROID
         string adUnitId = "ca-app-pub-3310465760158650/5921338452";
 #elif UNITY_IPHONE
-            string adUnitId = "ca-app-pub-3940256099942544/2934735716";
+        string adUnitId = "ca-app-pub-3940256099942544/2934735716";
 #else
-            string adUnitId = "unexpected_platform";
+        string adUnitId = "unexpected_platform";
 #endif
+        this.bannerView = new BannerView(adUnitId, AdSize.Leaderboard, 0,-500);
 
-        // Create a 320x50 banner at the top of the screen.
-        this.bannerView = new BannerView(adUnitId, AdSize.SmartBanner, AdPosition.BottomRight);
+
 
         // Called when an ad request has successfully loaded.
         this.bannerView.OnAdLoaded += this.HandleOnAdLoaded;
@@ -40,19 +40,26 @@ public class AdMobBanner : MonoBehaviour
         this.bannerView.OnAdOpening += this.HandleOnAdOpened;
         // Called when the user returned from the app after an ad click.
         this.bannerView.OnAdClosed += this.HandleOnAdClosed;
-        // Called when the ad click caused the user to leave the application.
-     //   this.bannerView.OnAdLeavingApplication += this.HandleOnAdLeavingApplication;
 
         // Create an empty ad request.
         AdRequest request = new AdRequest.Builder().Build();
 
         // Load the banner with the request.
         this.bannerView.LoadAd(request);
-    }
 
+      //  this.bannerView.Show();
+        Debug.Log("Banner mostrado");
+    }
     public void HandleOnAdLoaded(object sender, EventArgs args)
     {
         MonoBehaviour.print("HandleAdLoaded event received");
+        //bannerView.Show();
+    }
+
+    public void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
+    {
+        MonoBehaviour.print("HandleFailedToReceiveAd event received with message: "
+                            + args.LoadAdError);
     }
 
     public void HandleOnAdOpened(object sender, EventArgs args)
@@ -65,19 +72,14 @@ public class AdMobBanner : MonoBehaviour
         MonoBehaviour.print("HandleAdClosed event received");
     }
 
-    public void HandleOnAdLeavingApplication(object sender, EventArgs args)
-    {
-        MonoBehaviour.print("HandleAdLeavingApplication event received");
-    }
-
-    public void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
-    {
-        MonoBehaviour.print("Banner failed to load: ");
-        // Handle the ad failed to load event.
-    }
-
     public void DestroyAd()
     {
-        bannerView.Destroy();
+        if (FindObjectOfType<AdMobBanner>() != null)
+        {
+            Debug.Log("Banner escondido");
+       //     bannerView.Hide();
+            bannerView.Destroy();
+        //    FindObjectOfType<AdMobBanner>().DestroyAd();
+        }
     }
 }
