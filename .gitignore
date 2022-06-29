@@ -72,3 +72,9 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 Proyecto_1/MonsterSurvival.rar
 Proyecto_1/MonsterSurvival.zip
+MonsterSurvival/Assets/Firebase/m2repository/com/google/firebase/firebase-app-unity/9.1.0/firebase-app-unity-9.1.0.srcaar
+MonsterSurvival/Assets/Firebase/Plugins/x86_64/FirebaseCppApp-9_1_0.bundle
+MonsterSurvival/Assets/Firebase/Plugins/x86_64/FirebaseCppApp-9_1_0.dll
+MonsterSurvival/Assets/Firebase/Plugins/x86_64/FirebaseCppApp-9_1_0.so
+MonsterSurvival/Assets/Plugins/iOS/Firebase/libFirebaseCppApp.a
+MonsterSurvival/Assets/Plugins/iOS/Firebase/libFirebaseCppAuth.a
