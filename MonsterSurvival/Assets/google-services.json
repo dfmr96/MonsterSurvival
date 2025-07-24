@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "812845332326",
+    "firebase_url": "https://monster-survival-badb7-default-rtdb.firebaseio.com",
+    "project_id": "monster-survival-badb7",
+    "storage_bucket": "monster-survival-badb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812845332326:android:439c21c02eeef03dd47aa7",
+        "android_client_info": {
+          "package_name": "com.DaveMarcano.MonsterSurvival"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812845332326-5t4ksnsklhi0cmr38nrit3av8i095567.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.DaveMarcano.MonsterSurvival",
+            "certificate_hash": "9dc5f934d3b12ed86ad93fafc4952a32d036a6b1"
+          }
+        },
+        {
+          "client_id": "812845332326-l7semgsmmppc1uppl6ta89fgkae75hbl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJnsfKcItTtM7as6YgqHa4eiSI4djytNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812845332326-l7semgsmmppc1uppl6ta89fgkae75hbl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

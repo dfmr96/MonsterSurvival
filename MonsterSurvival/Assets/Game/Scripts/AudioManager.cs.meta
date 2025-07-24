@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 549c62184ec04734da9f1835b07e7022
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - audioMixer: {fileID: 24100000, guid: c295399811794eb4da429fb8c5bf283f, type: 2}
+  - audioSetting: {instanceID: 0}
+  - confirmSound: {instanceID: 0}
+  - gemPick: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

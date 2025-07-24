@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - GemTaker
+  - Knife
+  - Shuriken
+  - Health Up
+  - Speed Up
+  - Defense Up
+  - Lightning Ring
+  - Boomeran
+  - Breakable
+  - Try Again Button
+  - Total Lifes
+  - Life Timer
+  - Fire Ring
+  - Barbarian Axe
+  - XP Booster
+  - Magnet
+  - Fire Scepter
+  - Thornmail
+  - BannerAds-LevelUp
+  - Super Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Enemy
+  - Water
+  - UI
+  - Powers
+  - Breakable
+  - Lights
+  - Background
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 719981613
+    locked: 0
+  - name: Enemy
+    uniqueID: 460692619
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 2396126615
+    locked: 0

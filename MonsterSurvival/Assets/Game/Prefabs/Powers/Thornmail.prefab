@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4845546348296654917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4845546348296654912}
+  - component: {fileID: 4845546348296654919}
+  - component: {fileID: 4845546348296654918}
+  m_Layer: 0
+  m_Name: Thornmail
+  m_TagString: Thornmail
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4845546348296654912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4845546348296654917}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4845546348296654919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4845546348296654917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33addd74678a1b49b7003b18bd5bae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerName: Thornmail
+  powerDescription: Reflect 115% damage from incoming attacks
+  powerIcon: {fileID: 1437930485, guid: 75bb8bef1026c3547a48f6c32ab75002, type: 3}
+  currentLevel: 1
+  maxLevel: 7
+  leveledUp: 0
+  health: 0
+  defense: 0
+  damage: 0
+  angularSpeed: 0
+  speed: 0
+  coolDown: 0
+  radius: 0
+  multiplier: 0.15
+  projectiles: 0
+--- !u!114 &4845546348296654918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4845546348296654917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6d61433a7b40a43883deb1ffed307c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerInfo: {fileID: 4845546348296654919}
+  showDamage: {fileID: 5256549769481028063, guid: 616ce6c2765962c46979482457e5f87b, type: 3}

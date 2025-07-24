@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: cd1487d965d751646a2b4a96eb62cb11
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Venice Classic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 41ac002b7972436438323e528b8d5d22, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

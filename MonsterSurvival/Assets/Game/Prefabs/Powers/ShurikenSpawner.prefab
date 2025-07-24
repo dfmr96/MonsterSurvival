@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5147963109617955839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5147963109617955825}
+  - component: {fileID: 5147963109617955824}
+  - component: {fileID: -6431254557341960164}
+  m_Layer: 6
+  m_Name: ShurikenSpawner
+  m_TagString: Shuriken
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5147963109617955825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5147963109617955839}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.20263432, y: 11.740953, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5147963109617955824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5147963109617955839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b4d402919b25f4f8d811a360c36780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerInfo: {fileID: -6431254557341960164}
+  shurikenPrefab: {fileID: 8324569980205961621, guid: 5c485b6acfcd5704ab848699a1757cc1, type: 3}
+  shurikenPrefabs: []
+  shurikenAmount: 0
+  canSpawnShuriken: 1
+--- !u!114 &-6431254557341960164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5147963109617955839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33addd74678a1b49b7003b18bd5bae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerName: Shuriken
+  powerDescription: Summon an amount of shuriken that spin around
+  powerIcon: {fileID: -1852582129, guid: 792fb709a142fb948b8de7a24b534f1a, type: 3}
+  currentLevel: 1
+  maxLevel: 7
+  leveledUp: 0
+  health: 10
+  defense: 0
+  damage: 5
+  angularSpeed: 2
+  speed: 0
+  coolDown: 5
+  radius: 3
+  multiplier: 0
+  projectiles: 5

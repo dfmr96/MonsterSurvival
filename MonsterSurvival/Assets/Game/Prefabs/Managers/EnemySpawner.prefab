@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5624592116901747420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5624592116901747418}
+  - component: {fileID: 5624592116901747419}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5624592116901747418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5624592116901747420}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1812938, y: 10.54615, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5624592116901747419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5624592116901747420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f104312597f03214e81a99648a3fb85c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyToSpawn:
+  - {fileID: 1662630152830727612, guid: a048d8112035d2d44b7c97803f8776ad, type: 3}
+  enemyPrefab:
+  - {fileID: 1662630152830727612, guid: a048d8112035d2d44b7c97803f8776ad, type: 3}
+  - {fileID: 1662630152830727612, guid: 789084cf5533c2042b5f4565dd4dee7f, type: 3}
+  - {fileID: 7555006842626249327, guid: 7387153bdbb90404193d3b8667854b06, type: 3}
+  - {fileID: 401930304025764447, guid: dd709ed88f8b4d2489bbe4cb341d449d, type: 3}
+  - {fileID: 463735652606366251, guid: 4bcf873a1a506c24a85645c264456baa, type: 3}
+  - {fileID: 2335152713740009633, guid: fd8cddecf32993041b12c2200e193061, type: 3}
+  - {fileID: 4586786143668228554, guid: 6248c4cc2dd96104faac767453d81217, type: 3}
+  - {fileID: 7077308512733679963, guid: 21d1a1a280778004eaf45f90e7b3c1c6, type: 3}
+  enemySpawnDelay: 1.5
+  maxSpawnRadius: 20
+  minSpawnRadius: 17
+  player: {fileID: 0}
